@@ -1,10 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rikanverse</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rikanverse — UK's First Conversational Agentic AI Property Platform</title>
+<meta name="description" content="Stop searching. Start talking. Rikanverse is the UK's first conversational agentic AI property platform for tenants, buyers and landlords.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy: #050d1f; --blue: #1a56db; --blue-light: #7eb8f7;
+    --gold: #c9a96e; --white: #ffffff;
+    --glass: rgba(255,255,255,0.04); --border: rgba(126,184,247,0.15);
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy); color: var(--white); font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 60px; background: rgba(5,13,31,0.85);
+    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; letter-spacing: 3px; }
+  .nav-logo span { color: var(--gold); }
+  .nav-cta { background: linear-gradient(135deg, var(--blue), #0a2463); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+  .hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 40px 80px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: url('hero-banner.png') center/cover no-repeat; opacity: 0.25; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,13,31,0.5) 0%, rgba(5,13,31,0.7) 60%, rgba(5,13,31,1) 100%); }
+  .hero-content { position: relative; z-index: 10; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.3); color: var(--gold); padding: 6px 18px; border-radius: 100px; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 32px; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 300; line-height: 1.05; letter-spacing: 2px; margin-bottom: 12px; }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub { font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--blue-light); font-weight: 300; letter-spacing: 1px; margin-bottom: 24px; }
+  .hero-desc { max-width: 600px; color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.8; margin-bottom: 48px; }
+  .btn-primary { background: linear-gradient(135deg, var(--blue), #0a2463); color: white; padding: 16px 36px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; }
+  .hero-note { margin-top: 16px; font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+  .app-preview { padding: 80px 60px; text-align: center; }
+  .app-preview img { max-width: 900px; width: 100%; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+  .features { padding: 100px 60px; max-width: 1200px; margin: 0 auto; }
+  .section-label { text-align: center; color: var(--gold); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+  .section-title { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; margin-bottom: 60px; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .feature-card { background: var(--glass); border: 1px solid var(--border); border-radius: 16px; padding: 32px; backdrop-filter: blur(10px); transition: border-color 0.3s, transform 0.3s; }
+  .feature-card:hover { border-color: rgba(126,184,247,0.4); transform: translateY(-4px); }
+  .feature-icon { font-size: 2rem; margin-bottom: 16px; }
+  .feature-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
+  .feature-card p { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+  .for-who { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 60px; }
+  .who-card { background: var(--glass); border: 1px solid var(--border); border-radius: 20px; padding: 48px 40px; }
+  .who-card.landlord { border-color: rgba(201,169,110,0.2); }
+  .who-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 16px; }
+  .who-card p { color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 24px; }
+  .who-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .who-list li { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+  .who-list li::before { content: '✓'; color: var(--blue-light); font-weight: 700; }
+  .beta-cta { padding: 100px 60px; text-align: center; }
+  .beta-box { max-width: 700px; margin: 0 auto; background: var(--glass); border: 1px solid var(--border); border-radius: 24px; padding: 60px 40px; }
+  .beta-box h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 400; margin-bottom: 16px; }
+  .beta-box p { color: rgba(255,255,255,0.6); margin-bottom: 32px; font-size: 1rem; line-height: 1.7; }
+  .beta-spots { display: inline-block; background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.3); color: var(--gold); padding: 6px 18px; border-radius: 100px; font-size: 0.8rem; margin-bottom: 32px; letter-spacing: 1px; }
+  .other-products { padding: 60px; border-top: 1px solid var(--border); text-align: center; }
+  .other-products p { color: rgba(255,255,255,0.4); font-size: 0.85rem; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .other-link { color: var(--blue-light); text-decoration: none; font-size: 0.9rem; }
+  .other-link:hover { color: var(--gold); }
+  footer { padding: 40px 60px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .features, .for-who, .beta-cta, .app-preview { padding: 60px 24px; }
+    .who-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
 </head>
 <body>
-  <h1>Hello</h1>
-  <p>My AI startup website.</p>
+<nav>
+  <div class="nav-logo">RIKAN<span>VERSE</span></div>
+  <a href="https://app.rikanverse.com" class="nav-cta" target="_blank">Request Beta Access →</a>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🇬🇧 UK's First Conversational Agentic AI Property Platform</div>
+    <h1>Stop Searching.<br><span>Start Talking.</span></h1>
+    <p class="hero-sub">Meet Rika — Your AI Property Assistant</p>
+    <p class="hero-desc">No dropdowns. No rigid filters. Just natural conversation. Rikanverse understands what you actually mean and finds matching properties — or helps you list yours — instantly.</p>
+    <a href="https://app.rikanverse.com" class="btn-primary" target="_blank">Apply for Early Access — Limited Spots →</a>
+    <p class="hero-note">Currently accepting a limited number of beta users · Closed Beta</p>
+  </div>
+</section>
+<section class="app-preview">
+  <img src="canary.png" alt="Rikanverse App">
+</section>
+<section class="features">
+  <p class="section-label">Why Rikanverse</p>
+  <h2 class="section-title">Built Different. Built Better.</h2>
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon">🗣️</div><h3>Conversational AI</h3><p>Talk to Rika like a real person. Describe your ideal home in your own words — she understands lifestyle needs and complex requirements.</p></div>
+    <div class="feature-card"><div class="feature-icon">🤖</div><h3>Truly Agentic</h3><p>Rikanverse doesn't just answer — it acts. It extracts intent, matches properties, and connects landlords with tenants automatically.</p></div>
+    <div class="feature-card"><div class="feature-icon">🎤</div><h3>Voice-First</h3><p>Simply speak your requirements. No typing, no ticking boxes. Built for how humans actually communicate.</p></div>
+    <div class="feature-card"><div class="feature-icon">🏠</div><h3>Two-Sided Marketplace</h3><p>Landlords list through conversation — free, no forms, no £300/month portal fees. Tenants get matched to real listings first.</p></div>
+    <div class="feature-card"><div class="feature-icon">⚖️</div><h3>Trusted Guidance</h3><p>Instant answers on tenancy agreements, legal requirements, mortgage options — all in one place, 24/7.</p></div>
+    <div class="feature-card"><div class="feature-icon">🔗</div><h3>Smart Routing</h3><p>Rikanverse routes you to Zoopla, SpareRoom, Habito — with perfectly filtered links tailored to your needs.</p></div>
+  </div>
+</section>
+<section class="for-who">
+  <p class="section-label">Built For</p>
+  <h2 class="section-title">Everyone in the UK Property Market</h2>
+  <div class="who-grid">
+    <div class="who-card">
+      <h3>🔍 Tenants & Buyers</h3>
+      <p>Describe your ideal home naturally. Rika finds matching properties, answers your questions, and guides you through the process.</p>
+      <ul class="who-list">
+        <li>Voice or text search</li>
+        <li>No rigid filter forms</li>
+        <li>Instant property matches</li>
+        <li>Mortgage guidance included</li>
+      </ul>
+    </div>
+    <div class="who-card landlord">
+      <h3>🏠 Landlords & Agents</h3>
+      <p>List your property through simple conversation. Get legal guidance. Connect with qualified tenants — free during beta.</p>
+      <ul class="who-list">
+        <li>No complex listing forms</li>
+        <li>Free during beta</li>
+        <li>Instant tenant matching</li>
+        <li>Legal & tenancy guidance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="beta-cta">
+  <div class="beta-box">
+    <span class="beta-spots">⚡ Limited Beta Spots Available</span>
+    <h2>Be Among the First</h2>
+    <p>Rikanverse is currently in closed beta. We're accepting a limited number of early users who want to experience the future of UK property search.</p>
+    <a href="https://app.rikanverse.com" class="btn-primary" target="_blank">Apply for Early Access →</a>
+  </div>
+</section>
+<section class="other-products">
+  <p>Other products by Rikanverse Ltd · RIMJHIM AI KINGDOM</p>
+  <a href="https://rimjhimaikingdom.com/" class="other-link" target="_blank">World's First Navigable Agentic AI Virtual City Experience App →</a>
+</section>
+<footer>
+  <span>© 2026 Rikanverse Ltd. Built in London.</span>
+  <span>Rimjhim (Rémy) Singh · AI Engineer & Founder</span>
+</footer>
 </body>
 </html>
