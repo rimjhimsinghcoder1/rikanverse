@@ -72,13 +72,27 @@
   .other-link { color: var(--blue-light); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
   .other-link:hover { color: var(--gold); }
   footer { padding: 36px 60px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.3); font-size: 0.78rem; }
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
     .features, .for-who, .beta-cta, .app-preview, .demos, .problem, .marvel2 { padding: 50px 20px; }
     .who-grid { grid-template-columns: 1fr; }
     .demos-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 10px; text-align: center; }
   }
+
+  .demo-section { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+  .demo-section .container { width: 100%; }
+  .section-eyebrow { text-align: center; color: var(--gold); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+  .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 50px; }
+  .demo-card { background: var(--glass); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .demo-card-inner { padding: 24px; }
+  .demo-card-name { font-size: 1rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 12px; text-transform: uppercase; }
+  .demo-card-desc { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 16px; }
+  .demo-thumb { display: block; position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .demo-thumb img { display: block; width: 100%; height: 220px; object-fit: cover; }
+  .demo-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; background: rgba(5,13,31,0.7); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: white; transition: background 0.2s, transform 0.2s; }
+  .demo-thumb:hover .demo-play { background: var(--blue); transform: translate(-50%, -50%) scale(1.08); }
+  .demo-caption { text-align: center; font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 12px; }
 </style>
 </head>
 <body>
