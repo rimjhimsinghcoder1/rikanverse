@@ -52,6 +52,14 @@
   .who-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .who-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
   .who-list li::before { content: '✓'; color: var(--blue-light); font-weight: 700; flex-shrink: 0; }
+  .founder-box { display: flex; gap: 40px; align-items: flex-start; }
+.founder-photo { flex: 0 0 280px; }
+.founder-photo img { width: 100%; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(0,0,0,0.4); object-fit: cover; }
+.founder-text { flex: 1; }
+@media (max-width: 768px) {
+  .founder-box { flex-direction: column; align-items: center; }
+  .founder-photo { flex: 0 0 auto; max-width: 220px; }
+}
   .demos { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
   .demos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 50px; }
   .demo-card { background: var(--glass); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
@@ -256,10 +264,60 @@
   <br><br>
   <a href="https://rimjhimaikingdom.com/" class="other-link" target="_blank">Visit RIMJHIM AI KINGDOM →</a>
 </section>
+<section style="padding:80px 60px;max-width:1100px;margin:0 auto;">
+  <p class="section-label">Meet the Founder</p>
+  <h2 class="section-title" style="margin-bottom:40px;">Rimjhim (Rémy) Singh</h2>
+
+  <div class="founder-box" style="background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:48px;">
+
+    <div class="founder-photo">
+      <img src="founder.jpg" alt="Rimjhim (Rémy) Singh">
+    </div>
+
+    <div class="founder-text">
+      <p style="color:var(--gold);font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">
+        AI Engineer · Technical AI Product Architect · Economist · Founder
+      </p>
+
+      <p style="color:rgba(255,255,255,0.7);line-height:1.9;font-size:0.95rem;margin-top:24px;">
+        Rimjhim (Rémy) Singh is a London-based AI Engineer, Technical AI Product Architect, Economist, and the Founder and CEO of RIKANVERSE LTD.— an AI Innovation Studio focused on building next-generation Agentic AI systems, intelligent automation products, and enterprise-grade AI solutions. She is also the sole architect and developer of this App.
+      </p>
+
+      <p style="color:rgba(255,255,255,0.7);line-height:1.9;font-size:0.95rem;margin-top:20px;">
+        She specialises in Agentic AI, LLM automation, AI agents, NLP, RAG pipelines, and scalable machine learning systems, designing intelligent solutions across the UK, Australia, Asia, and North America. Her work focuses on building AI systems capable of reasoning, planning, workflow orchestration, and real-world decision-making.
+      </p>
+
+      <p style="color:rgba(255,255,255,0.7);line-height:1.9;font-size:0.95rem;margin-top:20px;">
+        She holds an MSc in Data Science from the University of Warwick and a Master's degree in Quantitative Economics. She is a Google Certified AI Professional. She has worked as a Senior AI Engineer for a London-based company where she architected and optimised enterprise GenAI workflows supporting startups across 60+ countries. She has also contributed to an Australian healthcare startup by designing AI-powered healthcare systems and conversational AI solutions.
+      </p>
+
+      <p style="color:rgba(255,255,255,0.7);line-height:1.9;font-size:0.95rem;margin-top:20px;">
+        Her work has delivered measurable impact including 95%+ workflow acceleration, 60%+ productivity improvements, and up to 98% faster document analysis for enterprise teams. Through RIMJHIM AI KINGDOM, she has independently designed and developed multiple full-stack AI systems — conversational banking assistants, voice-first PropTech applications, intelligent automation agents, and AI orchestration frameworks — engineering more than 10 AI agents.
+      </p>
+
+      <p style="color:rgba(255,255,255,0.7);line-height:1.9;font-size:0.95rem;margin-top:20px;">
+        Before transitioning fully into AI Engineering, Rimjhim built a strong academic and research background in Economics, Data Analysis, and Quantitative Research. She previously worked as an Assistant Professor and has published 15+ research articles across labour economics, industrial organisation, environmental policy, tourism economics, and ML-driven analysis. She presented research at the University of Oxford, where her paper was later published by Brill. She is also the author of Puzzles of Labour Economics (2022).
+      </p>
+
+      <p style="color:rgba(255,255,255,0.7);line-height:1.9;font-size:0.95rem;margin-top:20px;">
+        Early in her career, she worked as an Intern with the Ministry of Home Affairs, Government of India. She is an alumna of Ramjas College, University of Delhi (Economics Honours), where she secured the Overall Rank 1 position. She has also ranked among the top Kaggle participants globally in machine learning competitions and actively contributes to open-source AI communities including Hugging Face.
+      </p>
+    </div>
+  </div>
+
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1.2rem;line-height:1.7;text-align:center;margin-top:36px;">
+    "AI isn't just about algorithms. It's about impact. Every solution should solve a real problem, deliver measurable value, and unlock new possibilities."
+  </p>
+</section>
  <section style="padding:40px 60px;text-align:center;border-top:1px solid var(--border);">
   <p style="color:rgba(255,255,255,0.8);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;"> Rikanverse ProTech App Beta Deployment Timestamp</p>
   <img src="railway.jpeg" style="max-width:600px;width:100%;border-radius:12px;border:1px solid rgba(126,184,247,0.15);opacity:0.8;">
   <p style="color:rgba(255,255,255,0.8);font-size:0.75rem;margin-top:12px;"> Deployed on June 10, 2026</p>
+    <p style="color:rgba(255,255,255,0.8);font-size:0.75rem;margin-top:12px;"> Deployed on June 10, 2026</p>
+</section>   
+
+<section style="padding:40px 60px;text-align:center;border-top:1px solid var(--border);">
+  <p style="color:rgba(255,255,255,0.4);...">Contact & Connect</p>
 <section style="padding:40px 60px;text-align:center;border-top:1px solid var(--border);">
   <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Contact & Connect</p>
   <a href="https://www.linkedin.com/company/rikanverse/?viewAsMember=true" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#0a66c2,#004182);color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;margin:8px;">
