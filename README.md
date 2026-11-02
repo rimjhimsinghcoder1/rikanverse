@@ -4,7 +4,7 @@
 
 Rikanverse helps tenants, buyers and landlords with questions that filter-based property portals cannot answer. It knows when to **ask**, when to **act**, when to **answer**, and when to **decline**.
 
-[Live app (closed beta)](https://app.rikanverse.com/) · [Website](https://rikanverse.com/) · [Demo: Landlord](https://www.youtube.com/watch?v=BeVBdet2ClM) · [Demo: Tenant](https://www.youtube.com/watch?v=qA67hR3qKrY) · [Paper](https://doi.org/10.5281/zenodo.23887913)
+[Website](https://rikanverse.com/) · [Demo: Landlord](https://www.youtube.com/watch?v=BeVBdet2ClM) · [Demo: Tenant](https://www.youtube.com/watch?v=qA67hR3qKrY) · [Paper](https://doi.org/10.5281/zenodo.23887913)
 
 > **Status:** closed beta. This repository documents the system and its research. The production source code is proprietary and not published here.
 
