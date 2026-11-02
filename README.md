@@ -118,7 +118,8 @@ Of the 27 respondents who valued an AI guide, 14 said it only matters if the inf
 
 ## Paper
 
-R. Singh, *When to Ask, Act or Decline: AI Engineering Lessons from Rikanverse, a Deployed LLM Agent*, Preprint, Zenodo, 2026. DOI: [10.5281/zenodo.23887913](https://doi.org/10.5281/zenodo.23887913)
+R. Singh, *Engineering Trustworthy Conversational AI: When to Ask, Act, or
+Abstain in Deployed LLM Agents*, Preprint, Zenodo, 2026. DOI: [10.5281/zenodo.23887913](https://doi.org/10.5281/zenodo.23887913)
 
 ```bibtex
 @misc{singh2026rikanverse,
