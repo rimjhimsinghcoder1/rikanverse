@@ -1,814 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-683D6SH4YB"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-683D6SH4YB');</script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="RIMJHIM AI KINGDOM — One of the World's First Navigable Agentic AI Ecosystem. Built by Rimjhim (Rémy) Singh, London.">
-<meta name="keywords" content="AI Engineer, Agentic AI, LLM, RAG, AI Agents, London, ReAct">
-<meta name="author" content="Rimjhim Singh">
-<!-- Open Graph / Link Preview -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://rimjhimaikingdom.com">
-<meta property="og:title" content="RIMJHIM AI KINGDOM | One of the World's First Navigable Agentic AI Ecosystem">
-<meta property="og:description" content="One of the World's First Sector-by-Sector Agentic AI Problem-Solution Navigator. Built solo by Rimjhim (Rémy) Singh, London.">
-<meta property="og:image" content="https://rimjhimaikingdom.com/banner2.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RIMJHIM AI KINGDOM | One of the World's First Navigable Agentic AI Ecosystem">
-<meta name="twitter:description" content="One of the First World's First Sector-by-Sector Agentic AI Problem-Solution Navigator. Built solo by Rimjhim (Rémy) Singh, London.">
-<meta name="twitter:image" content="https://rimjhimaikingdom.com/banner2.png">
-<title>RIMJHIM AI KINGDOM | One of the First World's First Navigable Agentic AI Ecosystem</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="HEupE-9QEABDl-AtomrQeT-wFYCojcUWF0rhQFgD2FE" />
+ <title>RIKANVERSE® — Building AI Marvels.Rikanverse: One of the World's First Proactive Multilingual Voice-Native ReAct Engine Agentic AI Property App. Built in London by Rimjhim (Rémy) Singh.</title>
+<meta name="description" content="Rikanverse: One of the World's First Proactive Multilingual Voice-Native ReAct Engine Agentic AI Property App. Built in London by Rimjhim (Rémy) Singh."><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --void:#02040a; --deep:#060d1a; --surface:#0d1b2e; --panel:#0f1e35;
-  --accent:#7c3aed; --accent2:#06b6d4; --accent3:#f59e0b;
-  --glow:#a78bfa; --success:#10b981; --danger:#ef4444;
-  --text:#ffffff; --muted:#94a3b8; --border:rgba(124,58,237,.2);
-  --grid:rgba(124,58,237,.06);
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --navy: #050d1f; --blue: #1a56db; --blue-light: #7eb8f7; --gold: #c9a96e; --white: #ffffff; --glass: rgba(255,255,255,0.04); --border: rgba(126,184,247,0.15); }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy); color: var(--white); font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: rgba(5,13,31,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; letter-spacing: 3px; }
+  .nav-logo span { color: var(--gold); }
+  .nav-cta { background: linear-gradient(135deg, var(--blue), #0a2463); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+  .hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 40px 80px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: url('hero.png') center/cover no-repeat; opacity: 0.3; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,13,31,0.4) 0%, rgba(5,13,31,0.65) 60%, rgba(5,13,31,1) 100%); }
+  .hero-content { position: relative; z-index: 10; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.3); color: var(--gold); padding: 8px 24px; border-radius: 100px; font-size: 1rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px; }  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 7vw, 5.5rem); font-weight: 300; line-height: 1.1; letter-spacing: 2px; margin-bottom: 12px; }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub { font-size: clamp(0.9rem, 1.8vw, 1.1rem); color: var(--blue-light); font-weight: 300; letter-spacing: 0.5px; margin-bottom: 20px; max-width: 750px; line-height: 1.6; }
+  .hero-desc { max-width: 600px; color: rgba(255,255,255,0.55); font-size: 0.95rem; line-height: 1.8; margin-bottom: 40px; }
+  .btn-primary { background: linear-gradient(135deg, var(--blue), #0a2463); color: white; padding: 16px 36px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; transition: opacity 0.2s, transform 0.2s; }
+  .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+  .hero-note { margin-top: 14px; font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+  .app-preview { padding: 60px; text-align: center; }
+  .app-preview img { max-width: 900px; width: 100%; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+  .problem { padding: 80px 60px; max-width: 900px; margin: 0 auto; }
+  .problem-box { background: var(--glass); border: 1px solid var(--border); border-radius: 20px; padding: 48px; }
+  .problem-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 24px; color: var(--gold); }
+  .problem-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .problem-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
+  .problem-list li::before { content: '→'; color: var(--blue-light); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .features { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+  .section-label { text-align: center; color: var(--gold); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+  .section-title { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; margin-bottom: 16px; }
+  .section-sub { text-align: center; color: rgba(255,255,255,0.5); font-size: 0.95rem; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .feature-card { background: var(--glass); border: 1px solid var(--border); border-radius: 16px; padding: 32px; backdrop-filter: blur(10px); transition: border-color 0.3s, transform 0.3s; }
+  .feature-card:hover { border-color: rgba(126,184,247,0.4); transform: translateY(-4px); }
+  .feature-icon { font-size: 2rem; margin-bottom: 16px; }
+  .feature-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 10px; }
+  .feature-card p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+  .for-who { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 50px; }
+  .who-card { background: var(--glass); border: 1px solid var(--border); border-radius: 20px; padding: 40px; }
+  .who-card.landlord { border-color: rgba(201,169,110,0.2); }
+  .who-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 14px; }
+  .who-card p { color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 20px; font-size: 0.9rem; }
+  .who-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .who-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+  .who-list li::before { content: '✓'; color: var(--blue-light); font-weight: 700; flex-shrink: 0; }
+  .founder-box { display: flex; gap: 40px; align-items: flex-start; }
+.founder-photo { flex: 0 0 280px; }
+.founder-photo img { width: 100%; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(0,0,0,0.4); object-fit: cover; }
+.founder-text { flex: 1; }
+@media (max-width: 768px) {
+  .founder-box { flex-direction: column; align-items: center; }
+  .founder-photo { flex: 0 0 auto; max-width: 220px; }
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--void);color:var(--text);font-family:'Rajdhani',sans-serif;overflow-x:hidden;cursor:default;}
+  .demos { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+  .demos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 50px; }
+  .demo-card { background: var(--glass); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .demo-video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+  .demo-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+  .demo-info { padding: 20px 24px; }
+  .demo-info h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+  .demo-info p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+  .beta-cta { padding: 80px 60px; text-align: center; }
+  .beta-box { max-width: 680px; margin: 0 auto; background: var(--glass); border: 1px solid var(--border); border-radius: 24px; padding: 56px 40px; }
+  .beta-box h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.3rem; font-weight: 400; margin-bottom: 14px; }
+  .beta-box p { color: rgba(255,255,255,0.6); margin-bottom: 28px; font-size: 0.95rem; line-height: 1.7; }
+  .beta-spots { display: inline-block; background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.3); color: var(--gold); padding: 6px 18px; border-radius: 100px; font-size: 0.78rem; margin-bottom: 28px; letter-spacing: 1px; }
+  .marvel2 { padding: 60px; border-top: 1px solid var(--border); text-align: center; }
+  .marvel2 p { color: rgba(255,255,255,0.8); font-size: 0.8rem; margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase; }
+  .marvel2 h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 8px; color: rgba(255,255,255,0.7); }
+  .marvel2-desc { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+  .other-link { color: var(--blue-light); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .other-link:hover { color: var(--gold); }
+  footer { padding: 36px 60px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.3); font-size: 0.78rem; }
+   @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .features, .for-who, .beta-cta, .app-preview, .demos, .problem, .marvel2, .demo-section { padding: 50px 20px; }
+    .who-grid { grid-template-columns: 1fr; }
+    .demos-grid { grid-template-columns: 1fr; }
+    .demo-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 10px; text-align: center; }
+  }
 
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
-
-/* ── SCANLINE ── */
-.scanline{position:fixed;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent2),transparent);opacity:.25;z-index:999;pointer-events:none;animation:scan 10s linear infinite;}
-@keyframes scan{from{top:0}to{top:100%}}
-
-/* ── GRID OVERLAY ── */
-.grid-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:64px 64px;z-index:0;pointer-events:none;}
-
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(2,4,10,.92);border-bottom:1px solid rgba(124,58,237,.15);backdrop-filter:blur(8px);}
-.nav-logo{font-family:'Orbitron',monospace;font-size:13px;font-weight:900;letter-spacing:3px;color:var(--glow);text-decoration:none;}
-.nav-logo span{color:var(--accent2);}
-.nav-links{display:flex;gap:24px;list-style:none;}
-.nav-links a{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--muted);text-decoration:none;transition:color .2s;}
-.nav-links a:hover{color:var(--accent2);}
-.nav-status{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:2px;}
-.dot{display:inline-block;width:5px;height:5px;background:var(--success);border-radius:50%;margin-right:5px;animation:blink 2s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-
-/* ── HERO BANNER ── */
-.hero{position:relative;margin-top:52px;width:100%;overflow:hidden;z-index:1;}
-.hero img{width:100%;height:auto;display:block;}
-.hero-overlay{position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,var(--void));}
-
-/* ── BASE ── */
-.section{position:relative;z-index:10;padding:80px 0;}
-.container{max-width:1200px;margin:0 auto;padding:0 40px;}
-
-/* ── INTRO ── */
-.intro-section{background:var(--void);padding:90px 0 70px;}
-.intro-eyebrow{font-family:'Share Tech Mono',monospace;font-size:16px;letter-spacing:5px;color:#ffffff;text-align:center;margin-bottom:22px;}
-.intro-title{font-family:'Orbitron',monospace;font-size:clamp(32px,5vw,60px);font-weight:900;letter-spacing:4px;text-align:center;background:linear-gradient(135deg,var(--glow),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:28px;line-height:1.2;}
-.world-first-badge{display:flex;align-items:center;justify-content:center;margin:0 auto 40px;}
-.wfb-inner{display:inline-flex;align-items:center;gap:14px;padding:14px 32px;border:1px solid rgba(124,58,237,.6);border-radius:2px;background:rgba(124,58,237,.1);}
-.wfb-label{font-family:'Share Tech Mono',monospace;font-size:clamp(10px,1.8vw,16px);letter-spacing:2px;color:#e2e8f0;text-align:center;}
-.wfb-dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);animation:blink 1.5s infinite;}
-.intro-body{max-width:900px;margin:0 auto;text-align:center;}
-.intro-body p{font-size:20px;line-height:2;color:#e2e8f0;margin-bottom:18px;}
-.intro-body p strong{color:var(--accent2);font-weight:600;}
-
-/* ── AGENTS ROW ── */
-.agents-row-section{background:var(--deep);padding:50px 0;border-top:1px solid rgba(124,58,237,.1);border-bottom:1px solid rgba(124,58,237,.1);}
-.agents-row-title{font-family:'Share Tech Mono',monospace;font-size:16px;letter-spacing:4px;color:#e2e8f0;text-align:center;margin-bottom:28px;text-transform:uppercase;}
-.agents-row{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
-@media(max-width:900px){.agents-row{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:480px){.agents-row{grid-template-columns:repeat(2,1fr);}}
-.agent-pill{background:var(--surface);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:20px 14px;text-align:center;transition:transform .2s,border-color .2s;}
-.agent-pill:hover{transform:translateY(-5px);}
-.agent-pill-icon{font-size:28px;margin-bottom:10px;display:block;}
-.agent-pill-name{font-family:'Orbitron',monospace;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:6px;display:block;}
-.agent-pill-stack{font-family:'Share Tech Mono',monospace;font-size:12px;color:#94a3b8;letter-spacing:1px;display:block;}
-.ap-bank{border-color:rgba(124,58,237,.3);} .ap-bank .agent-pill-name{color:var(--glow);}
-.ap-prop{border-color:rgba(6,182,212,.3);}  .ap-prop .agent-pill-name{color:var(--accent2);}
-.ap-doc {border-color:rgba(245,158,11,.3);}  .ap-doc  .agent-pill-name{color:var(--accent3);}
-.ap-rest{border-color:rgba(239,68,68,.3);}   .ap-rest .agent-pill-name{color:#f87171;}
-.ap-off {border-color:rgba(16,185,129,.3);}  .ap-off  .agent-pill-name{color:var(--success);}
-.ap-news{border-color:rgba(59,130,246,.3);}  .ap-news .agent-pill-name{color:#60a5fa;}
-
-/* ── AI CITY ── */
-.city-section{background:var(--void);padding:0;position:relative;overflow:hidden;}
-.city-bg-grid{position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-.city-scan{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent2),transparent);opacity:.3;animation:scan 8s linear infinite;pointer-events:none;}
-.city-content{position:relative;z-index:10;width:100%;padding:80px 0 60px;}
-.city-head{text-align:center;margin-bottom:16px;padding:0 40px;}
-.city-head h2{font-family:'Orbitron',monospace;font-size:clamp(22px,6vw,96px);font-weight:900;letter-spacing:clamp(2px,2vw,12px);background:linear-gradient(135deg,var(--glow),var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:14px;}
-.city-head p{font-family:'Share Tech Mono',monospace;font-size:clamp(10px,2vw,16px);color:#e2e8f0;letter-spacing:clamp(1px,1vw,4px);}
-.city-claim-badge{display:flex;justify-content:center;margin:20px 0 40px;padding:0 16px;}
-.ccb{font-family:'Share Tech Mono',monospace;font-size:clamp(9px,1.4vw,15px);letter-spacing:1px;color:#e2e8f0;padding:10px 20px;border:1px solid rgba(124,58,237,.5);background:rgba(124,58,237,.12);border-radius:2px;text-align:center;line-height:1.6;}
-
-/* ISOMETRIC CITY SVG WRAPPER */
-.city-svg-wrap{width:100%;overflow:visible;margin:0 auto;position:relative;}
-.city-svg-wrap svg{width:100%;height:auto;display:block;}
-.bld-g{cursor:pointer;}
-.bld-g:hover{filter:brightness(1.35) drop-shadow(0 0 12px rgba(255,255,255,0.2));}
-
-/* PROBLEM PANEL */
-.problem-panel{display:none;max-width:1200px;margin:28px auto 0;background:var(--surface);border:1px solid rgba(124,58,237,.3);border-radius:4px;padding:36px;font-family:'Rajdhani',sans-serif;}
-.problem-panel.open{display:block;animation:fadeUp .3s ease;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.pp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
-.pp-tag{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:3px;color:#94a3b8;margin-bottom:8px;}
-.pp-title{font-family:'Orbitron',monospace;font-size:24px;font-weight:700;}
-.pp-close{background:none;border:1px solid #94a3b8;color:#94a3b8;width:32px;height:32px;border-radius:2px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
-.pp-close:hover{border-color:var(--danger);color:var(--danger);}
-.pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-@media(max-width:600px){.pp-grid{grid-template-columns:1fr;}}
-.pp-box{padding:22px;border-radius:3px;}
-.pp-box-prob{background:rgba(239,68,68,.07);border-left:3px solid var(--danger);}
-.pp-box-sol {background:rgba(16,185,129,.07);border-left:3px solid var(--success);}
-.pp-box-label{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:2px;margin-bottom:14px;}
-.pp-box-label-prob{color:var(--danger);}
-.pp-box-label-sol {color:var(--success);}
-.pp-problem-list{list-style:none;}
-.pp-problem-list li{font-size:17px;color:#e2e8f0;line-height:1.7;margin-bottom:10px;padding-left:20px;position:relative;}
-.pp-problem-list li::before{content:'✕';position:absolute;left:0;color:var(--danger);font-size:13px;top:2px;}
-.pp-sol-text{font-size:17px;color:#ffffff;line-height:1.9;}
-.pp-stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
-.pp-stack span{font-family:'Share Tech Mono',monospace;font-size:12px;padding:4px 12px;border-radius:2px;border:1px solid;letter-spacing:1px;}
-
-/* ── DEMO ── */
-.demo-section{background:var(--deep);padding:80px 0;border-top:1px solid rgba(124,58,237,.1);}
-.section-eyebrow{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:4px;color:#ffffff;text-align:center;margin-bottom:12px;}
-.section-title{font-family:'Orbitron',monospace;font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:4px;text-align:center;color:#ffffff;margin-bottom:10px;}
-.section-sub{font-family:'Rajdhani',sans-serif;font-size:20px;color:#e2e8f0;text-align:center;margin-bottom:40px;}
-.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-@media(max-width:640px){.demo-grid{grid-template-columns:1fr;}}
-.demo-card{background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:4px;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
-.demo-card:hover{border-color:rgba(126,179,214,.3);box-shadow:0 0 28px rgba(126,179,214,.08);}
-.demo-card-inner{padding:20px;}
-.demo-card-name{font-family:'Orbitron',monospace;font-size:16px;font-weight:700;letter-spacing:2px;color:#ffffff;margin-bottom:12px;}
-.demo-card-desc{font-size:16px;color:#e2e8f0;line-height:1.8;margin-bottom:16px;}
-.demo-thumb{position:relative;display:block;background:var(--panel);border-radius:2px;overflow:hidden;cursor:pointer;}
-.demo-thumb img{width:100%;height:auto;display:block;transition:transform .3s;}
-.demo-thumb:hover img{transform:scale(1.02);}
-.demo-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;font-size:24px;color:white;transition:background .3s;}
-.demo-thumb:hover .demo-play{background:rgba(124,58,237,.8);}
-.demo-caption{font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:2px;color:#94a3b8;text-align:center;margin-top:12px;}
-
-/* ── FOUNDER ── */
-.founder-section{background:var(--void);padding:80px 0;border-top:1px solid rgba(124,58,237,.1);}
-.founder-grid{display:grid;grid-template-columns:300px 1fr;gap:50px;align-items:start;margin-top:48px;}
-@media(max-width:768px){
-  .founder-grid{grid-template-columns:1fr;}
-  .founder-photo{position:static!important;max-width:180px;margin:0 auto 28px;}
-}
-.founder-photo{position:static;}
-.founder-photo img{width:100%;border-radius:4px;border:1px solid rgba(124,58,237,.3);display:block;}
-.founder-bio h3{font-family:'Orbitron',monospace;font-size:26px;font-weight:700;letter-spacing:2px;color:#ffffff;margin-bottom:8px;}
-.founder-title{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:2px;color:var(--accent2);margin-bottom:26px;}
-.founder-bio p{font-size:17px;line-height:2;color:#e2e8f0;margin-bottom:18px;}
-.founder-quote{border-left:3px solid var(--accent);padding:16px 24px;margin:26px 0;background:rgba(124,58,237,.08);border-radius:0 4px 4px 0;}
-.founder-quote p{font-size:17px;line-height:1.9;color:#e2e8f0;font-style:italic;margin:0;}
-.founder-links{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap;}
-.founder-link{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:2px;padding:10px 22px;border:1px solid rgba(124,58,237,.5);color:var(--glow);text-decoration:none;border-radius:2px;transition:all .2s;}
-.founder-link:hover{background:rgba(124,58,237,.15);border-color:var(--accent);}
-
-/* ── KNOWLEDGE DISTRICT ── */
-.kd-section{background:var(--deep);position:relative;overflow:hidden;border-top:1px solid rgba(245,158,11,.15);}
-.kd-bg-grid{position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(245,158,11,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.04) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-.kd-scan{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#f59e0b,transparent);opacity:.2;animation:scan 12s linear infinite;pointer-events:none;}
-.kd-inner{position:relative;z-index:10;max-width:100%;margin:0 auto;padding:0 24px;}
-.kd-svg-wrap{width:100%;max-width:1400px;margin:0 auto;}
-.kd-svg-wrap svg{width:100%;height:auto;overflow:visible;}
-.kd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-@media(max-width:900px){.kd-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.kd-grid{grid-template-columns:1fr;}}
-.kd-exhibit{background:var(--surface);border:1px solid rgba(255,255,255,.06);border-radius:4px;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;display:flex;flex-direction:column;}
-.kd-exhibit:hover{transform:translateY(-6px);border-color:rgba(245,158,11,.3);box-shadow:0 0 30px rgba(245,158,11,.08);}
-.kd-exhibit-top{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 0;}
-.kd-number{font-family:'Orbitron',monospace;font-size:28px;font-weight:900;color:rgba(245,158,11,.2);line-height:1;}
-.kd-category{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:2px;padding:3px 8px;border-radius:2px;border:1px solid;}
-.kd-img-link{display:block;position:relative;overflow:hidden;margin:12px 16px 0;border-radius:3px;}
-.kd-img{width:100%;height:180px;object-fit:cover;object-position:top;display:block;transition:transform .4s;}
-.kd-exhibit:hover .kd-img{transform:scale(1.04);}
-.kd-img-overlay{position:absolute;inset:0;background:rgba(2,4,10,.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;}
-.kd-exhibit:hover .kd-img-overlay{opacity:1;}
-.kd-read{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:3px;color:#fcd34d;}
-.kd-exhibit-body{padding:16px;flex:1;display:flex;flex-direction:column;}
-.kd-title{font-family:'Orbitron',monospace;font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--text);line-height:1.4;margin-bottom:6px;}
-.kd-sub{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:1px;color:#475569;margin-bottom:10px;}
-.kd-desc{font-size:13px;color:#64748b;line-height:1.7;margin-bottom:16px;flex:1;}
-.kd-btn{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;padding:7px 14px;border:1px solid;text-decoration:none;border-radius:2px;display:inline-block;transition:all .2s;align-self:flex-start;}
-.kd-btn:hover{background:rgba(245,158,11,.1);}
-
-footer{background:var(--deep);border-top:1px solid rgba(124,58,237,.15);padding:40px 0;text-align:center;}
-.footer-logo{font-family:'Orbitron',monospace;font-size:16px;letter-spacing:3px;color:var(--glow);margin-bottom:10px;}
-.footer-tagline{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:3px;color:#94a3b8;margin-bottom:16px;}
-.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
-.footer-links a{font-family:'Share Tech Mono',monospace;font-size:13px;color:#94a3b8;text-decoration:none;letter-spacing:1px;transition:color .2s;}
-.footer-links a:hover{color:var(--accent2);}
-
-
-/* ══════════════════════════════════════════
-   RIKANVERSE SECTION (merged from rikanverse.com)
-   All styles scoped under .rkv so they never clash
-   ══════════════════════════════════════════ */
-.rkv{--navy:#050d1f;--blue:#1a56db;--blue-light:#7eb8f7;--gold:#c9a96e;--white:#ffffff;--glass:rgba(255,255,255,0.04);--border:rgba(126,184,247,0.15);
-  position:relative;z-index:10;background:var(--navy);color:var(--white);font-family:'Outfit',sans-serif;border-top:1px solid var(--border);scroll-margin-top:52px;}
-.rkv-topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 60px;border-bottom:1px solid var(--border);}
-.rkv-nav-cta{background:linear-gradient(135deg,var(--blue),#0a2463);color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:500;}
-.rkv-btn-primary{background:linear-gradient(135deg,var(--blue),#0a2463);color:#fff;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:600;font-size:1rem;display:inline-block;transition:opacity .2s,transform .2s;}
-.rkv-btn-primary:hover{opacity:.9;transform:translateY(-2px);}
-.rkv-problem{padding:80px 60px;max-width:900px;margin:0 auto;}
-.rkv-problem-box{background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:48px;}
-.rkv-problem-box h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;margin-bottom:24px;color:var(--gold);}
-.rkv-problem-list{list-style:none;display:flex;flex-direction:column;gap:14px;}
-.rkv-problem-list li{display:flex;align-items:flex-start;gap:12px;font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.6;}
-.rkv-problem-list li::before{content:'→';color:var(--blue-light);font-weight:700;flex-shrink:0;margin-top:2px;}
-.rkv-features{padding:80px 60px;max-width:1200px;margin:0 auto;}
-.rkv-section-label,.rkv-section-eyebrow{text-align:center;color:var(--gold);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;}
-.rkv-section-title{text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;margin-bottom:16px;}
-.rkv-section-sub{text-align:center;color:rgba(255,255,255,.5);font-size:.95rem;margin-bottom:50px;max-width:600px;margin-left:auto;margin-right:auto;}
-.rkv-features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
-.rkv-feature-card{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:32px;backdrop-filter:blur(10px);transition:border-color .3s,transform .3s;}
-.rkv-feature-card:hover{border-color:rgba(126,184,247,.4);transform:translateY(-4px);}
-.rkv-feature-card h3{font-size:1.05rem;font-weight:600;margin-bottom:10px;}
-.rkv-feature-card p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.7;}
-.rkv-for-who{padding:80px 60px;max-width:1200px;margin:0 auto;}
-.rkv-who-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:50px;}
-.rkv-who-card{background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:40px;}
-.rkv-who-card.rkv-landlord{border-color:rgba(201,169,110,.2);}
-.rkv-who-card h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;margin-bottom:14px;}
-.rkv-who-card p{color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:20px;font-size:.9rem;}
-.rkv-who-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.rkv-who-list li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.5;}
-.rkv-who-list li::before{content:'✓';color:var(--blue-light);font-weight:700;flex-shrink:0;}
-.rkv-founder-box{display:flex;gap:40px;align-items:flex-start;}
-.rkv-founder-photo{flex:0 0 280px;}
-.rkv-founder-photo img{width:100%;border-radius:16px;border:1px solid var(--border);box-shadow:0 20px 50px rgba(0,0,0,.4);object-fit:cover;}
-.rkv-founder-text{flex:1;}
-.rkv-demos{padding:80px 60px;max-width:1200px;margin:0 auto;}
-.rkv-demos-grid,.rkv-demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin-top:50px;}
-.rkv-demo-card{background:var(--glass);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
-.rkv-demo-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;}
-.rkv-demo-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
-.rkv-demo-info{padding:20px 24px;}
-.rkv-demo-info h3{font-size:1rem;font-weight:600;margin-bottom:6px;}
-.rkv-demo-info p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.6;}
-.rkv-demo-section{padding:80px 60px;max-width:1200px;margin:0 auto;}
-.rkv-container{width:100%;}
-.rkv-demo-card-inner{padding:24px;}
-.rkv-demo-card-name{font-size:1rem;font-weight:600;letter-spacing:.5px;margin-bottom:12px;text-transform:uppercase;}
-.rkv-demo-card-desc{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:16px;}
-.rkv-demo-thumb{display:block;position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--border);}
-.rkv-demo-thumb img{display:block;width:100%;height:220px;object-fit:cover;}
-.rkv-demo-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(5,13,31,.7);border:1px solid rgba(255,255,255,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#fff;transition:background .2s,transform .2s;}
-.rkv-demo-thumb:hover .rkv-demo-play{background:var(--blue);transform:translate(-50%,-50%) scale(1.08);}
-.rkv-demo-caption{text-align:center;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:12px;}
-@media(max-width:768px){
-  .rkv-topbar{padding:16px 20px;justify-content:center;}
-  .rkv-features,.rkv-for-who,.rkv-demos,.rkv-problem,.rkv-demo-section{padding:50px 20px;}
-  .rkv-problem-box,.rkv-who-card{padding:28px 22px;}
-  .rkv-who-grid,.rkv-demos-grid,.rkv-demo-grid{grid-template-columns:1fr;}
-  .rkv-founder-box{flex-direction:column;align-items:center;padding:28px 22px!important;}
-  .rkv-founder-photo{flex:0 0 auto;max-width:220px;}
-  .rkv section[style*="padding:80px 60px"],.rkv section[style*="padding:40px 60px"],.rkv section[style*="padding:100px 40px"]{padding-left:20px!important;padding-right:20px!important;}
-}
-@media(max-width:400px){.rkv-demos-grid,.rkv-demo-grid,.rkv-features-grid{grid-template-columns:1fr;}.rkv-demo-card{min-width:0;}}
-
-/* MOBILE NAV HIDE */
-@media(max-width:768px){.nav-links{display:none;}.nav-status{display:none;}}
+  .demo-section { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+  .demo-section .container { width: 100%; }
+  .section-eyebrow { text-align: center; color: var(--gold); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+  .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 50px; }
+  .demo-card { background: var(--glass); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .demo-card-inner { padding: 24px; }
+  .demo-card-name { font-size: 1rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 12px; text-transform: uppercase; }
+  .demo-card-desc { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 16px; }
+  .demo-thumb { display: block; position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .demo-thumb img { display: block; width: 100%; height: 220px; object-fit: cover; }
+  .demo-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; background: rgba(5,13,31,0.7); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: white; transition: background 0.2s, transform 0.2s; }
+  .demo-thumb:hover .demo-play { background: var(--blue); transform: translate(-50%, -50%) scale(1.08); }
+  .demo-caption { text-align: center; font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 12px; }
 </style>
 </head>
 <body>
-
-<div class="grid-overlay"></div>
-<div class="scanline"></div>
-
-<!-- NAV -->
 <nav>
-  <a href="#home" class="nav-logo">RIMJHIM <span>AI</span> KINGDOM</a>
-  <ul class="nav-links">
-    <li><a href="#intro">ABOUT</a></li>
-    <li><a href="#city">AI CITY</a></li>
-    <li><a href="#articles">KNOWLEDGE</a></li>
-    <li><a href="#demo">DEMO</a></li>
-    <li><a href="#rikanverse">RIKANVERSE</a></li>
-    <li><a href="#founder">FOUNDER</a></li>
-  </ul>
-  <div class="nav-status"><span class="dot"></span>SYSTEMS ONLINE</div>
+  <div class="nav-logo">
+  <img src="rikanverselogo.png" style="height:45px;width:auto;vertical-align:middle;">
+</div>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdonMLnlxU1Es8mtMwwXApJq3GBpFiC1dkCgi28mt-nTEgJ9w/viewform" class="nav-cta" target="_blank">Apply for Early Access →</a>
 </nav>
 
-<!-- ══ 01 HERO BANNER ══ -->
-<section id="home" class="hero">
-  <img src="banner5.png" alt="RIMJHIM AI KINGDOM Banner">
-  <div class="hero-overlay"></div>
-</section>
 
-<!-- ══ 02 INTRO ══ -->
-<section id="intro" class="intro-section">
-  <div class="container">
-    <p class="intro-eyebrow">FOUNDED BY RIMJHIM (RÉMY) SINGH · LONDON</p>
-    <h1 class="intro-title">WELCOME TO RIMJHIM AI KINGDOM™</h1>
-    <div class="world-first-badge">
-      <div class="wfb-inner">
-        <div class="wfb-dot"></div>
-        <span class="wfb-label">ONE OF THE WORLD'S FIRST NAVIGABLE AGENTIC AI ECOSYSTEM · BUILT SOLO</span>
-        <div class="wfb-dot"></div>
-      </div>
-    </div>
-    <div class="intro-body">
-      <p>RIKANVERSE is an AI innovation studio where <strong>AI Marvels </strong> are designed, built, and deployed from scratch. Every system starts with an architecture; reasoning engines, safety layers, multi-tool orchestration, not just a prompt and an API call. This is where agentic AI meets real-world problems. From autonomous banking assistants to voice-first property agents, every build is <strong>production-grade, explainable, and engineered to act</strong>, not just respond.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 03 AGENTS ROW ══ -->
-<section class="agents-row-section">
-  <div class="container">
-    <p class="agents-row-title">Agentic AI System Solutions Designed by Rimjhim (Rémy) Singh</p>
-    <div class="agents-row">
-      <div class="agent-pill ap-bank">
-        <span class="agent-pill-icon"></span>
-        <span class="agent-pill-name">BANKING AGENT</span>
-        <span class="agent-pill-stack">ReAct · RAG · FCA</span>
-      </div>
-      <div class="agent-pill ap-prop">
-        <span class="agent-pill-icon"></span>
-        <span class="agent-pill-name">PROPERTY AGENT</span>
-        <span class="agent-pill-stack">Voice · FastAPI</span>
-      </div>
-      <div class="agent-pill ap-doc">
-        <span class="agent-pill-icon"></span>
-        <span class="agent-pill-name">DOC ASSISTANT</span>
-        <span class="agent-pill-stack">RAG · ChromaDB</span>
-      </div>
-      <div class="agent-pill ap-rest">
-        <span class="agent-pill-icon">🍽️</span>
-        <span class="agent-pill-name">REVIEW AGENT</span>
-        <span class="agent-pill-stack">NLP · GPT-4</span>
-      </div>
-      <div class="agent-pill ap-off">
-        <span class="agent-pill-icon"></span>
-        <span class="agent-pill-name">EMAIL AGENT</span>
-        <span class="agent-pill-stack">n8n · Gmail API</span>
-      </div>
-      <div class="agent-pill ap-news">
-        <span class="agent-pill-icon"></span>
-        <span class="agent-pill-name">NEWS AGENT</span>
-        <span class="agent-pill-stack">GPT-4 · Notion</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 04 AI CITY ══ -->
-<section id="city" class="city-section">
-  <div class="city-bg-grid"></div>
-  <div class="city-scan"></div>
-  <div class="city-content">
-
-    <div class="city-head">
-      <h2>THE AI CITY</h2>
-      <p>EVERY BUILDING IS A REAL AGENTIC SYSTEM · CLICK TO EXPLORE THE PROBLEM IT SOLVES</p>
-    </div>
-    <div class="city-claim-badge">
-      <span class="ccb">ONE OF THE WORLD'S FIRST SECTOR-BY-SECTOR AGENTIC AI PROBLEM-SOLUTION NAVIGATOR</span>
-    </div>
-
-    <!-- ISOMETRIC SVG CITY -->
-    <div class="city-svg-wrap">
-    <div class="city-svg-wrap">
-      <svg viewBox="0 0 1800 900" xmlns="http://www.w3.org/2000/svg">
-        <!-- GROUND PLANE -->
-        <polygon points="900,100 1380,340 900,580 420,340" fill="#060d18" stroke="#0f1e30" stroke-width="1.5"/>
-        <line x1="660" y1="220" x2="1140" y2="460" stroke="#0d1828" stroke-width="0.6"/>
-        <line x1="900" y1="100" x2="900" y2="580" stroke="#0d1828" stroke-width="0.6"/>
-        <line x1="1140" y1="220" x2="660" y2="460" stroke="#0d1828" stroke-width="0.6"/>
-        <line x1="460" y1="340" x2="1340" y2="340" stroke="#0d1828" stroke-width="0.5"/>
-        <line x1="900" y1="100" x2="420" y2="340" stroke="#111e35" stroke-width="2.5"/>
-        <line x1="900" y1="100" x2="1380" y2="340" stroke="#111e35" stroke-width="2.5"/>
-        <line x1="420" y1="340" x2="900" y2="580" stroke="#111e35" stroke-width="2.5"/>
-        <line x1="1380" y1="340" x2="900" y2="580" stroke="#111e35" stroke-width="2.5"/>
-
-        <!-- BANKING TOWER far left -->
-        <g class="bld-g" onclick="openCity('bank')">
-          <ellipse cx="220" cy="400" rx="62" ry="21" fill="#020408" opacity="0.6"/>
-          <polygon points="158,88 220,54 220,380 158,414" fill="#2d1a6e"/>
-          <polygon points="220,54 282,88 282,414 220,380" fill="#4c1d95"/>
-          <polygon points="158,88 220,54 282,88 220,122" fill="#7c3aed"/>
-          <rect x="168" y="134" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.9"/>
-          <rect x="168" y="162" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.7"/>
-          <rect x="168" y="190" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.9"/>
-          <rect x="168" y="218" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.65"/>
-          <rect x="168" y="246" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.85"/>
-          <rect x="168" y="274" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.7"/>
-          <rect x="168" y="302" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.8"/>
-          <rect x="168" y="330" width="38" height="12" rx="1" fill="#c4b5fd" opacity="0.6"/>
-          <rect x="230" y="134" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.7"/>
-          <rect x="230" y="162" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.9"/>
-          <rect x="230" y="190" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.6"/>
-          <rect x="230" y="218" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.85"/>
-          <rect x="230" y="246" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.7"/>
-          <rect x="230" y="274" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.9"/>
-          <rect x="230" y="302" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.6"/>
-          <rect x="230" y="330" width="38" height="12" rx="1" fill="#8b5cf6" opacity="0.8"/>
-          <line x1="220" y1="54" x2="220" y2="14" stroke="#7c3aed" stroke-width="3"/>
-          <circle cx="220" cy="12" r="7" fill="#a78bfa"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
-          <text x="220" y="440" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="22" fill="#a78bfa" letter-spacing="1" font-weight="700">🏦 BANKING TOWER</text>
-          <text x="220" y="468" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="18" fill="#7c3aed">▸ click to explore</text>
-        </g>
-
-        <!-- NEWS HQ back center-left -->
-        <g class="bld-g" onclick="openCity('news')">
-          <ellipse cx="620" cy="218" rx="46" ry="16" fill="#020408" opacity="0.6"/>
-          <polygon points="574,114 620,90 620,204 574,228" fill="#1e3a5f"/>
-          <polygon points="620,90 666,114 666,228 620,204" fill="#1e4d8c"/>
-          <polygon points="574,114 620,90 666,114 620,138" fill="#3b82f6"/>
-          <rect x="582" y="146" width="28" height="10" rx="1" fill="#93c5fd" opacity="0.85"/>
-          <rect x="582" y="170" width="28" height="10" rx="1" fill="#93c5fd" opacity="0.6"/>
-          <rect x="582" y="194" width="28" height="10" rx="1" fill="#93c5fd" opacity="0.9"/>
-          <rect x="630" y="146" width="28" height="10" rx="1" fill="#60a5fa" opacity="0.7"/>
-          <rect x="630" y="170" width="28" height="10" rx="1" fill="#60a5fa" opacity="0.9"/>
-          <rect x="630" y="194" width="28" height="10" rx="1" fill="#60a5fa" opacity="0.6"/>
-          <line x1="620" y1="90" x2="620" y2="52" stroke="#3b82f6" stroke-width="3"/>
-          <line x1="602" y1="71" x2="638" y2="71" stroke="#3b82f6" stroke-width="2"/>
-          <line x1="610" y1="61" x2="630" y2="61" stroke="#3b82f6" stroke-width="2"/>
-          <circle cx="620" cy="50" r="6" fill="#93c5fd"><animate attributeName="opacity" values="1;0.1;1" dur="0.9s" repeatCount="indefinite"/></circle>
-          <text x="620" y="252" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="22" fill="#60a5fa" letter-spacing="1" font-weight="700">📺 NEWS HQ</text>
-          <text x="620" y="280" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="18" fill="#1d4ed8">▸ click to explore</text>
-        </g>
-
-        <!-- PROPERTY TOWERS far right -->
-        <g class="bld-g" onclick="openCity('prop')">
-          <ellipse cx="1570" cy="260" rx="62" ry="21" fill="#020408" opacity="0.6"/>
-          <polygon points="1508,106 1570,72 1570,242 1508,276" fill="#0e4f6e"/>
-          <polygon points="1570,72 1632,106 1632,276 1570,242" fill="#0e7490"/>
-          <polygon points="1508,106 1570,72 1632,106 1570,140" fill="#06b6d4"/>
-          <rect x="1518" y="152" width="34" height="11" rx="1" fill="#67e8f9" opacity="0.85"/>
-          <rect x="1518" y="178" width="34" height="11" rx="1" fill="#67e8f9" opacity="0.65"/>
-          <rect x="1518" y="204" width="34" height="11" rx="1" fill="#67e8f9" opacity="0.9"/>
-          <rect x="1518" y="230" width="34" height="11" rx="1" fill="#67e8f9" opacity="0.7"/>
-          <rect x="1580" y="152" width="34" height="11" rx="1" fill="#22d3ee" opacity="0.7"/>
-          <rect x="1580" y="178" width="34" height="11" rx="1" fill="#22d3ee" opacity="0.9"/>
-          <rect x="1580" y="204" width="34" height="11" rx="1" fill="#22d3ee" opacity="0.6"/>
-          <rect x="1580" y="230" width="34" height="11" rx="1" fill="#22d3ee" opacity="0.85"/>
-          <line x1="1570" y1="72" x2="1570" y2="32" stroke="#06b6d4" stroke-width="3"/>
-          <circle cx="1570" cy="30" r="7" fill="#67e8f9"><animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/></circle>
-          <text x="1570" y="300" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="22" fill="#06b6d4" letter-spacing="1" font-weight="700">PROPERTY TOWERS</text>
-          <text x="1570" y="328" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="18" fill="#0e7490">▸ click to explore</text>
-        </g>
-
-        <!-- KNOWLEDGE ACADEMY mid left -->
-        <g class="bld-g" onclick="openCity('school')">
-          <ellipse cx="390" cy="510" rx="56" ry="19" fill="#020408" opacity="0.6"/>
-          <polygon points="334,308 390,282 390,494 334,520" fill="#78350f"/>
-          <polygon points="390,282 446,308 446,520 390,494" fill="#92400e"/>
-          <polygon points="334,308 390,282 446,308 390,334" fill="#f59e0b"/>
-          <ellipse cx="390" cy="282" rx="30" ry="13" fill="#fcd34d" opacity="0.5"/>
-          <rect x="342" y="344" width="34" height="11" rx="1" fill="#fcd34d" opacity="0.9"/>
-          <rect x="342" y="372" width="34" height="11" rx="1" fill="#fcd34d" opacity="0.7"/>
-          <rect x="342" y="400" width="34" height="11" rx="1" fill="#fcd34d" opacity="0.85"/>
-          <rect x="342" y="428" width="34" height="11" rx="1" fill="#fcd34d" opacity="0.65"/>
-          <rect x="342" y="456" width="34" height="11" rx="1" fill="#fcd34d" opacity="0.8"/>
-          <rect x="404" y="344" width="34" height="11" rx="1" fill="#fbbf24" opacity="0.7"/>
-          <rect x="404" y="372" width="34" height="11" rx="1" fill="#fbbf24" opacity="0.9"/>
-          <rect x="404" y="400" width="34" height="11" rx="1" fill="#fbbf24" opacity="0.6"/>
-          <rect x="404" y="428" width="34" height="11" rx="1" fill="#fbbf24" opacity="0.85"/>
-          <rect x="404" y="456" width="34" height="11" rx="1" fill="#fbbf24" opacity="0.7"/>
-          <text x="390" y="546" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="22" fill="#f59e0b" letter-spacing="1" font-weight="700">🏫 KNOWLEDGE ACADEMY</text>
-          <text x="390" y="574" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="18" fill="#b45309">▸ click to explore</text>
-        </g>
-
-        <!-- CORPORATE OFFICE mid right -->
-        <g class="bld-g" onclick="openCity('office')">
-          <ellipse cx="1390" cy="470" rx="56" ry="19" fill="#020408" opacity="0.6"/>
-          <polygon points="1334,270 1390,244 1390,454 1334,480" fill="#064e3b"/>
-          <polygon points="1390,244 1446,270 1446,480 1390,454" fill="#065f46"/>
-          <polygon points="1334,270 1390,244 1446,270 1390,296" fill="#10b981"/>
-          <rect x="1344" y="308" width="34" height="11" rx="1" fill="#6ee7b7" opacity="0.9"/>
-          <rect x="1344" y="338" width="34" height="11" rx="1" fill="#6ee7b7" opacity="0.65"/>
-          <rect x="1344" y="368" width="34" height="11" rx="1" fill="#6ee7b7" opacity="0.85"/>
-          <rect x="1344" y="398" width="34" height="11" rx="1" fill="#6ee7b7" opacity="0.7"/>
-          <rect x="1344" y="428" width="34" height="11" rx="1" fill="#6ee7b7" opacity="0.9"/>
-          <rect x="1408" y="308" width="34" height="11" rx="1" fill="#34d399" opacity="0.7"/>
-          <rect x="1408" y="338" width="34" height="11" rx="1" fill="#34d399" opacity="0.9"/>
-          <rect x="1408" y="368" width="34" height="11" rx="1" fill="#34d399" opacity="0.6"/>
-          <rect x="1408" y="398" width="34" height="11" rx="1" fill="#34d399" opacity="0.85"/>
-          <rect x="1408" y="428" width="34" height="11" rx="1" fill="#34d399" opacity="0.7"/>
-          <line x1="1390" y1="244" x2="1390" y2="202" stroke="#10b981" stroke-width="3"/>
-          <circle cx="1390" cy="200" r="7" fill="#6ee7b7"><animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
-          <text x="1390" y="506" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="22" fill="#10b981" letter-spacing="1" font-weight="700">🏢 CORPORATE OFFICE</text>
-          <text x="1390" y="534" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="18" fill="#065f46">▸ click to explore</text>
-        </g>
-
-        <!-- RESTAURANT QUARTER front center -->
-        <g class="bld-g" onclick="openCity('rest')">
-          <ellipse cx="900" cy="644" rx="66" ry="22" fill="#020408" opacity="0.6"/>
-          <polygon points="834,424 900,392 900,624 834,656" fill="#7f1d1d"/>
-          <polygon points="900,392 966,424 966,656 900,624" fill="#991b1b"/>
-          <polygon points="834,424 900,392 966,424 900,456" fill="#ef4444"/>
-          <rect x="844" y="466" width="40" height="12" rx="1" fill="#fca5a5" opacity="0.9"/>
-          <rect x="844" y="496" width="40" height="12" rx="1" fill="#fca5a5" opacity="0.65"/>
-          <rect x="844" y="526" width="40" height="12" rx="1" fill="#fca5a5" opacity="0.85"/>
-          <rect x="844" y="556" width="40" height="12" rx="1" fill="#fca5a5" opacity="0.7"/>
-          <rect x="844" y="586" width="40" height="12" rx="1" fill="#fca5a5" opacity="0.9"/>
-          <rect x="916" y="466" width="40" height="12" rx="1" fill="#f87171" opacity="0.7"/>
-          <rect x="916" y="496" width="40" height="12" rx="1" fill="#f87171" opacity="0.9"/>
-          <rect x="916" y="526" width="40" height="12" rx="1" fill="#f87171" opacity="0.6"/>
-          <rect x="916" y="556" width="40" height="12" rx="1" fill="#f87171" opacity="0.85"/>
-          <rect x="916" y="586" width="40" height="12" rx="1" fill="#f87171" opacity="0.7"/>
-          <text x="900" y="678" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="22" fill="#ef4444" letter-spacing="1" font-weight="700">🍽️ RESTAURANT QUARTER</text>
-          <text x="900" y="706" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="18" fill="#991b1b">▸ click to explore</text>
-        </g>
-
-        <!-- SAFETY HQ CENTER -->
-        <circle cx="900" cy="390" r="20" fill="#0d0618" stroke="#7c3aed" stroke-width="3"/>
-        <circle cx="900" cy="390" r="10" fill="#7c3aed" opacity="0.7">
-          <animate attributeName="r" values="10;19;10" dur="2.4s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2.4s" repeatCount="indefinite"/>
-        </circle>
-        <text x="900" y="372" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="16" fill="#a78bfa" font-weight="700">🛡️ SAFETY HQ</text>
-        <text x="900" y="418" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="14" fill="#4c1d95">six-gate core</text>
-
-        <!-- POWER LINES -->
-        <line x1="220" y1="280" x2="620" y2="190" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-30" dur="2s" repeatCount="indefinite"/></line>
-        <line x1="620" y1="190" x2="900" y2="365" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-30" dur="2.5s" repeatCount="indefinite"/></line>
-        <line x1="900" y1="365" x2="1570" y2="190" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-30" dur="3s" repeatCount="indefinite"/></line>
-        <line x1="390" y1="430" x2="900" y2="390" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-30" dur="1.8s" repeatCount="indefinite"/></line>
-        <line x1="900" y1="390" x2="1390" y2="410" stroke="#10b981" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-30" dur="2.2s" repeatCount="indefinite"/></line>
-        <line x1="900" y1="390" x2="900" y2="460" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-30" dur="1.6s" repeatCount="indefinite"/></line>
-
-        <text x="100" y="220" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="15" fill="#1e3a5f" opacity="0.8" letter-spacing="3">FINANCIAL DISTRICT</text>
-        <text x="1700" y="340" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="15" fill="#1e3a5f" opacity="0.8" letter-spacing="3">ENTERPRISE ZONE</text>
-        <text x="900" y="790" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="15" fill="#1e3a5f" opacity="0.8" letter-spacing="3">HOSPITALITY QUARTER</text>
-
-      </svg>
-    </div>
-    </div>
-
-    <!-- PROBLEM-SOLUTION PANEL -->
-    <div class="problem-panel" id="cityPanel">
-      <div class="pp-header">
-        <div>
-          <div class="pp-tag" id="pp-tag"></div>
-          <div class="pp-title" id="pp-title"></div>
-        </div>
-        <button class="pp-close" onclick="closeCity()">✕</button>
-      </div>
-      <div class="pp-grid">
-        <div class="pp-box pp-box-prob">
-          <div class="pp-box-label pp-box-label-prob">// THE PROBLEM</div>
-          <ul class="pp-problem-list" id="pp-problems"></ul>
-        </div>
-        <div class="pp-box pp-box-sol">
-          <div class="pp-box-label pp-box-label-sol">// RIMJHIM'S SOLUTION</div>
-          <p class="pp-sol-text" id="pp-solution"></p>
-          <div class="pp-stack" id="pp-stack"></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══ 07 KNOWLEDGE DISTRICT ══ -->
-<section id="articles" class="kd-section">
-  <div class="kd-bg-grid"></div>
-  <div class="kd-scan"></div>
-  <div class="kd-inner">
-
-    <div class="city-head" style="padding-top:60px;">
-      <h2>THE KNOWLEDGE DISTRICT</h2>
-      <p>PUBLISHED WRITINGS · CLICK ANY BUILDING TO READ</p>
-    </div>
-    <div class="city-claim-badge">
-      <span class="ccb" style="border-color:rgba(245,158,11,.5);color:#fcd34d;">AI ENGINEERING · SYSTEM DESIGN · BEST PRACTICES · BY RIMJHIM (RÉMY) SINGH</span>
-    </div>
-
-    <!-- ISOMETRIC LIBRARY SVG -->
-    <div class="kd-svg-wrap">
-      <svg viewBox="0 0 1100 580" xmlns="http://www.w3.org/2000/svg">
-
-        <!-- GROUND PLANE -->
-        <polygon points="550,80 830,220 550,360 270,220" fill="#060d18" stroke="#0f1e30" stroke-width="1.5"/>
-        <line x1="410" y1="150" x2="690" y2="290" stroke="#0d1828" stroke-width="0.6"/>
-        <line x1="550" y1="80" x2="550" y2="360" stroke="#0d1828" stroke-width="0.6"/>
-        <line x1="690" y1="150" x2="410" y2="290" stroke="#0d1828" stroke-width="0.6"/>
-        <line x1="310" y1="200" x2="790" y2="200" stroke="#0d1828" stroke-width="0.5"/>
-        <line x1="310" y1="250" x2="790" y2="250" stroke="#0d1828" stroke-width="0.4"/>
-        <!-- Roads -->
-        <line x1="550" y1="80"  x2="270" y2="220" stroke="#111e35" stroke-width="2"/>
-        <line x1="550" y1="80"  x2="830" y2="220" stroke="#111e35" stroke-width="2"/>
-        <line x1="270" y1="220" x2="550" y2="360" stroke="#111e35" stroke-width="2"/>
-        <line x1="830" y1="220" x2="550" y2="360" stroke="#111e35" stroke-width="2"/>
-        <line x1="550" y1="80"  x2="550" y2="360" stroke="#111e35" stroke-width="1.5" stroke-dasharray="8 6"/>
-
-        <!-- ── LIBRARY BUILDING 1: RELIABILITY (back-left) ── -->
-        <!-- DOME + COLUMNS = library feel -->
-        <g class="bld-g" onclick="window.open('https://medium.com/@rimjhimsingh.professional/designing-reliable-ai-systems-my-engineering-approach-across-rag-agents-and-real-world-workflows-61a3645b2d8a','_blank')">
-          <ellipse cx="340" cy="298" rx="48" ry="15" fill="#020408" opacity="0.5"/>
-          <!-- Base steps -->
-          <polygon points="298,284 340,268 382,284 382,298 340,314 298,298" fill="#4a2800"/>
-          <polygon points="302,278 340,263 378,278 378,290 340,305 302,290" fill="#5a3200"/>
-          <!-- Main body -->
-          <polygon points="308,264 340,250 372,264 372,282 340,296 308,282" fill="#78350f"/>
-          <polygon points="308,264 340,250 372,264 340,278" fill="#92400e"/>
-          <!-- Columns left face -->
-          <rect x="312" y="255" width="5" height="24" rx="1" fill="#fcd34d" opacity="0.4"/>
-          <rect x="320" y="255" width="5" height="24" rx="1" fill="#fcd34d" opacity="0.4"/>
-          <rect x="328" y="255" width="5" height="24" rx="1" fill="#fcd34d" opacity="0.4"/>
-          <!-- Columns right face -->
-          <rect x="348" y="255" width="5" height="24" rx="1" fill="#92400e" opacity="0.6"/>
-          <rect x="356" y="255" width="5" height="24" rx="1" fill="#92400e" opacity="0.6"/>
-          <rect x="364" y="255" width="5" height="24" rx="1" fill="#92400e" opacity="0.6"/>
-          <!-- Windows -->
-          <rect x="313" y="268" width="16" height="8" rx="1" fill="#fcd34d" opacity="0.8"/>
-          <rect x="313" y="278" width="16" height="5" rx="1" fill="#fbbf24" opacity="0.6"/>
-          <rect x="351" y="268" width="16" height="8" rx="1" fill="#fbbf24" opacity="0.7"/>
-          <rect x="351" y="278" width="16" height="5" rx="1" fill="#f59e0b" opacity="0.5"/>
-          <!-- Dome -->
-          <ellipse cx="340" cy="250" rx="20" ry="8" fill="#f59e0b" opacity="0.35" stroke="#fcd34d" stroke-width="0.8"/>
-          <ellipse cx="340" cy="248" rx="14" ry="6" fill="#f59e0b" opacity="0.2"/>
-          <!-- Flagpole -->
-          <line x1="340" y1="242" x2="340" y2="218" stroke="#fcd34d" stroke-width="1.5"/>
-          <polygon points="340,218 354,224 340,230" fill="#f59e0b" opacity="0.8"/>
-          <!-- Blinking light -->
-          <circle cx="340" cy="216" r="3" fill="#fcd34d">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
-          </circle>
-        <!-- Label -->
-          <text x="340" y="322" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="13" fill="#fcd34d" font-weight="700" letter-spacing="1">📚 RELIABILITY LIBRARY</text>
-          <text x="340" y="340" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="11" fill="#ffffff">Designing Reliable AI Systems</text>
-          <text x="340" y="356" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="10" fill="#f59e0b">[ click to read on medium ]</text>
-        </g>
-
-        <!-- ── LIBRARY BUILDING 2: STRATEGY (back-right) ── -->
-        <g class="bld-g" onclick="window.open('https://medium.com/@rimjhimsingh.professional/why-your-ai-project-failed-and-how-to-fix-it-e3110483e1c0','_blank')">
-          <ellipse cx="700" cy="266" rx="48" ry="15" fill="#020408" opacity="0.5"/>
-          <!-- Base steps -->
-          <polygon points="658,252 700,236 742,252 742,266 700,280 658,266" fill="#4a0808"/>
-          <polygon points="662,246 700,231 738,246 738,258 700,272 662,258" fill="#5e0a0a"/>
-          <!-- Main body -->
-          <polygon points="668,232 700,218 732,232 732,250 700,264 668,250" fill="#7f1d1d"/>
-          <polygon points="668,232 700,218 732,232 700,246" fill="#991b1b"/>
-          <!-- Columns -->
-          <rect x="672" y="222" width="5" height="24" rx="1" fill="#fca5a5" opacity="0.35"/>
-          <rect x="680" y="222" width="5" height="24" rx="1" fill="#fca5a5" opacity="0.35"/>
-          <rect x="688" y="222" width="5" height="24" rx="1" fill="#fca5a5" opacity="0.35"/>
-          <rect x="708" y="222" width="5" height="24" rx="1" fill="#991b1b" opacity="0.5"/>
-          <rect x="716" y="222" width="5" height="24" rx="1" fill="#991b1b" opacity="0.5"/>
-          <rect x="724" y="222" width="5" height="24" rx="1" fill="#991b1b" opacity="0.5"/>
-          <!-- Windows -->
-          <rect x="673" y="234" width="16" height="8" rx="1" fill="#fca5a5" opacity="0.8"/>
-          <rect x="673" y="244" width="16" height="5" rx="1" fill="#f87171" opacity="0.6"/>
-          <rect x="711" y="234" width="16" height="8" rx="1" fill="#f87171" opacity="0.7"/>
-          <rect x="711" y="244" width="16" height="5" rx="1" fill="#ef4444" opacity="0.5"/>
-          <!-- Dome -->
-          <ellipse cx="700" cy="218" rx="20" ry="8" fill="#ef4444" opacity="0.3" stroke="#fca5a5" stroke-width="0.8"/>
-          <ellipse cx="700" cy="216" rx="14" ry="6" fill="#ef4444" opacity="0.15"/>
-          <!-- Flagpole -->
-          <line x1="700" y1="210" x2="700" y2="186" stroke="#fca5a5" stroke-width="1.5"/>
-          <polygon points="700,186 714,192 700,198" fill="#ef4444" opacity="0.8"/>
-          <circle cx="700" cy="184" r="3" fill="#fca5a5">
-            <animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/>
-          </circle>
-          <!-- Label -->
-          <text x="700" y="290" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="13" fill="#f87171" font-weight="700" letter-spacing="1">📕 STRATEGY LIBRARY</text>
-          <text x="700" y="308" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="11" fill="#ffffff">Why Your AI Project Failed</text>
-          <text x="700" y="324" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="10" fill="#fca5a5">[ click to read on medium ]</text>
-        </g>
-
-        <!-- ── LIBRARY BUILDING 3: ENGINEERING (front-center) ── -->
-        <g class="bld-g" onclick="window.open('https://medium.com/@rimjhimsingh.professional/how-to-validate-ai-generated-python-code-15f662c6fed4','_blank')">
-          <ellipse cx="545" cy="390" rx="52" ry="16" fill="#020408" opacity="0.5"/>
-          <!-- Base steps -->
-          <polygon points="498,374 545,356 592,374 592,390 545,406 498,390" fill="#0a2040"/>
-          <polygon points="503,368 545,351 587,368 587,380 545,395 503,380" fill="#0d2a55"/>
-          <!-- Main body -->
-          <polygon points="510,350 545,334 580,350 580,370 545,385 510,370" fill="#1e3a5f"/>
-          <polygon points="510,350 545,334 580,350 545,364" fill="#1e4d8c"/>
-          <!-- Columns -->
-          <rect x="514" y="339" width="5" height="26" rx="1" fill="#93c5fd" opacity="0.35"/>
-          <rect x="522" y="339" width="5" height="26" rx="1" fill="#93c5fd" opacity="0.35"/>
-          <rect x="530" y="339" width="5" height="26" rx="1" fill="#93c5fd" opacity="0.35"/>
-          <rect x="551" y="339" width="5" height="26" rx="1" fill="#1e4d8c" opacity="0.5"/>
-          <rect x="559" y="339" width="5" height="26" rx="1" fill="#1e4d8c" opacity="0.5"/>
-          <rect x="567" y="339" width="5" height="26" rx="1" fill="#1e4d8c" opacity="0.5"/>
-          <!-- Windows -->
-          <rect x="515" y="352" width="18" height="9" rx="1" fill="#93c5fd" opacity="0.8"/>
-          <rect x="515" y="363" width="18" height="6" rx="1" fill="#60a5fa" opacity="0.6"/>
-          <rect x="553" y="352" width="18" height="9" rx="1" fill="#60a5fa" opacity="0.7"/>
-          <rect x="553" y="363" width="18" height="6" rx="1" fill="#3b82f6" opacity="0.5"/>
-          <!-- Dome -->
-          <ellipse cx="545" cy="334" rx="22" ry="9" fill="#3b82f6" opacity="0.3" stroke="#93c5fd" stroke-width="0.8"/>
-          <ellipse cx="545" cy="332" rx="15" ry="6" fill="#3b82f6" opacity="0.15"/>
-          <!-- Flagpole -->
-          <line x1="545" y1="325" x2="545" y2="298" stroke="#93c5fd" stroke-width="1.5"/>
-          <polygon points="545,298 560,304 545,310" fill="#3b82f6" opacity="0.8"/>
-          <circle cx="545" cy="296" r="3" fill="#93c5fd">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite"/>
-          </circle>
-          <!-- Label -->
-          <text x="545" y="416" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="13" fill="#60a5fa" font-weight="700" letter-spacing="1">🔬 ENGINEERING LIBRARY</text>
-          <text x="545" y="434" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="11" fill="#ffffff">Validate AI-Generated Python Code</text>
-          <text x="545" y="450" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="10" fill="#93c5fd">[ click to read on medium ]</text>
-        </g>
-
-        <!-- Power lines between buildings -->
-        <line x1="340" y1="260" x2="545" y2="320" stroke="#f59e0b" stroke-width="0.8" stroke-dasharray="8 4" opacity="0.5">
-          <animate attributeName="stroke-dashoffset" values="0;-24" dur="2s" repeatCount="indefinite"/>
-        </line>
-        <line x1="545" y1="320" x2="700" y2="240" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="8 4" opacity="0.5">
-          <animate attributeName="stroke-dashoffset" values="0;-24" dur="2.5s" repeatCount="indefinite"/>
-        </line>
-        <line x1="340" y1="260" x2="700" y2="240" stroke="#60a5fa" stroke-width="0.8" stroke-dasharray="8 4" opacity="0.3">
-          <animate attributeName="stroke-dashoffset" values="0;-24" dur="3s" repeatCount="indefinite"/>
-        </line>
-
-        <!-- District labels -->
-        <text x="240" y="190" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="12" fill="#ffffff" opacity="0.9" letter-spacing="3">RELIABILITY WING</text>
-        <text x="810" y="185" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="12" fill="#ffffff" opacity="0.9" letter-spacing="3">STRATEGY WING</text>
-        <text x="545" y="510" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="12" fill="#ffffff" opacity="0.9" letter-spacing="3">ENGINEERING WING</text>
-
-        <!-- Central fountain/node -->
-        <circle cx="545" cy="225" r="10" fill="#060d18" stroke="#fcd34d" stroke-width="1"/>
-        <circle cx="545" cy="225" r="5" fill="#f59e0b" opacity="0.5">
-          <animate attributeName="r" values="5;9;5" dur="3s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3s" repeatCount="indefinite"/>
-        </circle>
-        <text x="545" y="216" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="9" fill="#fcd34d">📖</text>
-
-      </svg>
-    </div>
-
-    <div style="text-align:center;margin-top:16px;padding-bottom:60px;">
-      <a href="https://medium.com/@rimjhimsingh.professional" target="_blank" style="font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:4px;color:#fcd34d;text-decoration:none;border-bottom:1px solid #f59e0b;padding-bottom:4px;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#fcd34d'">VIEW ALL ARTICLES ON MEDIUM →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ AGENTIC AI APPS IN ACTION (moved above Rikanverse) ══ -->
-<div class="rkv">
-<section id="demo" class="rkv-demo-section" style="scroll-margin-top:60px;">
-  <div class="rkv-container">
-    <p class="rkv-section-eyebrow">Other AI Products by Rikanverse Ltd</p>
-    <h2 class="rkv-section-title">AGENTIC AI APPS IN ACTION</h2>
-    <p class="rkv-section-sub">Designed &amp; Built by Rimjhim (Rémy) Singh</p>
-
-    <div class="rkv-demo-grid">
-
-      <div class="rkv-demo-card">
-        <div class="rkv-demo-card-inner">
-          <div class="rkv-demo-card-name">E-COMMERCE AGENTIC AI SOLUTION - Customer Service</div>
-          <a href="https://drive.google.com/file/d/1eT5u2u15LWXnDHJVYhNHkCs_yCPnVOqI/view" target="_blank" class="rkv-demo-thumb">
-            <img src="https://rikanverse.com/demothumbnail.png" alt="E-commerce Agentic AI Demo">
-            <div class="rkv-demo-play">▶</div>
-          </a>
-          <p class="rkv-demo-caption">CLICK TO WATCH THE FULL DEMO</p>
-        </div>
-      </div>
-
-      <div class="rkv-demo-card">
-        <div class="rkv-demo-card-inner">
-          <div class="rkv-demo-card-name">FINTECH &amp; BANKING AGENTIC AI SOLUTION</div>
-          <p class="rkv-demo-card-desc">Intelligent Banking Agent on a ReAct Orchestration Engine with a Six-Gate Safety System</p>
-          <div class="rkv-demo-thumb">
-            <img src="https://rikanverse.com/fintechthumbnail.png" alt="Fintech &amp; Banking Agentic AI Solution">
-          </div>
-        </div>
-      </div>
-
-      <div class="rkv-demo-card">
-        <div class="rkv-demo-card-inner">
-          <div class="rkv-demo-card-name">HOSPITALITY INDUSTRY AGENTIC AI APP SOLUTION: HOTEL REVIEW AUTOMATION</div>
-          <p class="rkv-demo-card-desc">A 4-layer production system automating review management with strict human-in-the-loop workflow — 92% sentiment accuracy, 2-3 second end-to-end processing, and active crisis detection for compliance risks.</p>
-          <a href="https://drive.google.com/file/d/1Pa5gLN3110tsfWyOXLf_sQpxd7TRXbQS/view" target="_blank" class="rkv-demo-thumb">
-            <img src="https://rikanverse.com/reviewthumbnail.png" alt="AI Review Response Agent Demo">
-            <div class="rkv-demo-play">▶</div>
-          </a>
-          <p class="rkv-demo-caption">CLICK TO WATCH THE FULL DEMO</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-</div>
-
-<!-- ══════════════════════════════════════════
-     RIKANVERSE — merged from rikanverse.com
-     (rikanverse.com stays live separately; images load from there)
-     ══════════════════════════════════════════ -->
-<div id="rikanverse" class="rkv">
-<div class="rkv-topbar">
-  <img src="https://rikanverse.com/rikanverselogo.png" alt="Rikanverse" style="height:45px;width:auto;">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdonMLnlxU1Es8mtMwwXApJq3GBpFiC1dkCgi28mt-nTEgJ9w/viewform" class="rkv-nav-cta" target="_blank">Apply for Early Access →</a>
-</div>
 <!-- HERO CONTENT -->
 <section style="text-align:center;padding:100px 40px 80px;background:var(--navy);display:flex;flex-direction:column;align-items:center;gap:16px;">
   <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,7vw,5.5rem);font-weight:300;line-height:1.1;letter-spacing:2px;">RIKANVERSE LTD.</h1>
@@ -816,16 +120,16 @@ footer{background:var(--deep);border-top:1px solid rgba(124,58,237,.15);padding:
 
   <p style="max-width:700px;color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.8;">Rikanverse® Ltd. is an AI Engineering Studio that builds revolutionary AI products.</p>
 
-  <img src="https://rikanverse.com/heroimage.png" alt="Rikanverse® UK PropTech App - One of the World's First proactive, Multilingual, Voice-Native, ReAct-Engine-powered Agentic AI UK Market Property App" style="max-width:900px;width:100%;border-radius:20px;margin:16px 0 8px;box-shadow:0 30px 80px rgba(0,0,0,0.4);">
+  <img src="heroimage.png" alt="Rikanverse® UK PropTech App - One of the World's First proactive, Multilingual, Voice-Native, ReAct-Engine-powered Agentic AI UK Market Property App" style="max-width:900px;width:100%;border-radius:20px;margin:16px 0 8px;box-shadow:0 30px 80px rgba(0,0,0,0.4);">
 
-  <img src="https://rikanverse.com/flagship.png" style="max-width:900px;width:100%;border-radius:20px;border:1px solid var(--border);box-shadow:0 40px 100px rgba(0,0,0,0.5);">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdonMLnlxU1Es8mtMwwXApJq3GBpFiC1dkCgi28mt-nTEgJ9w/viewform" class="rkv-btn-primary" target="_blank">Apply for Early Access →</a>
+  <img src="flagship.png" style="max-width:900px;width:100%;border-radius:20px;border:1px solid var(--border);box-shadow:0 40px 100px rgba(0,0,0,0.5);">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdonMLnlxU1Es8mtMwwXApJq3GBpFiC1dkCgi28mt-nTEgJ9w/viewform" class="btn-primary" target="_blank">Apply for Early Access →</a>
 </section>
 
-<section class="rkv-problem">
-  <div class="rkv-problem-box">
+<section class="problem">
+  <div class="problem-box">
     <h3>The Problem with Property Search Today</h3>
-    <ul class="rkv-problem-list">
+    <ul class="problem-list">
       <li>Most property apps are still filter-based and manual but people have natural questions that existing platforms don't handle</li>
       <li>Understanding council tax, bills, or rental processes is confusing and requires endless Googling</li>
       <li>Finding properties based on lifestyle, not just bedrooms and price ranges</li>
@@ -834,27 +138,27 @@ footer{background:var(--deep);border-top:1px solid rgba(124,58,237,.15);padding:
     </ul>
   </div>
 </section>
-<section class="rkv-features">
-  <p class="rkv-section-label">What Makes Rikanverse Different</p>
-  <h2 class="rkv-section-title">Truly Agentic. Truly Different.</h2>
-  <p class="rkv-section-sub">Not a chatbot. Not a filter. A proactive AI agent that thinks like a human estate agent.</p>
-  <div class="rkv-features-grid">
-    <div class="rkv-feature-card"><div class="rkv-feature-icon"></div><h3>✓ ReAct Engine Powered</h3><p>Built on a ReAct (Reasoning + Acting) architecture; Rikanverse doesn't just answer, it reasons through your needs and takes real actions.</p></div>
-    <div class="rkv-feature-card"><div class="rkv-feature-icon"></div><h3>✓ Voice-First & Native</h3><p>Speak naturally. Landlords verbally register listings. Tenants describe their ideal home out loud. No typing required.</p></div>
-    <div class="rkv-feature-card"><div class="rkv-feature-icon"></div><h3>✓ Multilingual</h3><p>Ask questions in your native language. Rikanverse understands multiple languages.</p></div>
-    <div class="rkv-feature-card"><div class="rkv-feature-icon"></div><h3>✓ Proactive Intelligence</h3><p>Rikanverse anticipates your needs like a human agent would. It doesn't wait for perfect input; it guides you through the process.</p></div>
-    <div class="rkv-feature-card"><div class="rkv-feature-icon"></div><h3>✓ Two-Sided Marketplace</h3><p>Landlords list by speaking. Tenants get matched to real listings first, get matched to listings on Rikanverse also can then routed to existing Property Apps in the UK.</p></div>
-    <div class="rkv-feature-card"><div class="rkv-feature-icon"></div><h3>✓ Trusted Property Guidance</h3><p>Council tax explained. Tenancy agreements clarified. Mortgage guidance included. Rental market demand and supply insights, all in one conversation.</p></div>
+<section class="features">
+  <p class="section-label">What Makes Rikanverse Different</p>
+  <h2 class="section-title">Truly Agentic. Truly Different.</h2>
+  <p class="section-sub">Not a chatbot. Not a filter. A proactive AI agent that thinks like a human estate agent.</p>
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon"></div><h3>✓ ReAct Engine Powered</h3><p>Built on a ReAct (Reasoning + Acting) architecture; Rikanverse doesn't just answer, it reasons through your needs and takes real actions.</p></div>
+    <div class="feature-card"><div class="feature-icon"></div><h3>✓ Voice-First & Native</h3><p>Speak naturally. Landlords verbally register listings. Tenants describe their ideal home out loud. No typing required.</p></div>
+    <div class="feature-card"><div class="feature-icon"></div><h3>✓ Multilingual</h3><p>Ask questions in your native language. Rikanverse understands multiple languages.</p></div>
+    <div class="feature-card"><div class="feature-icon"></div><h3>✓ Proactive Intelligence</h3><p>Rikanverse anticipates your needs like a human agent would. It doesn't wait for perfect input; it guides you through the process.</p></div>
+    <div class="feature-card"><div class="feature-icon"></div><h3>✓ Two-Sided Marketplace</h3><p>Landlords list by speaking. Tenants get matched to real listings first, get matched to listings on Rikanverse also can then routed to existing Property Apps in the UK.</p></div>
+    <div class="feature-card"><div class="feature-icon"></div><h3>✓ Trusted Property Guidance</h3><p>Council tax explained. Tenancy agreements clarified. Mortgage guidance included. Rental market demand and supply insights, all in one conversation.</p></div>
   </div>
 </section>
-<section class="rkv-for-who">
-  <p class="rkv-section-label">Built For</p>
-  <h2 class="rkv-section-title">Everyone in the UK Property Market</h2>
-  <div class="rkv-who-grid">
-    <div class="rkv-who-card">
+<section class="for-who">
+  <p class="section-label">Built For</p>
+  <h2 class="section-title">Everyone in the UK Property Market</h2>
+  <div class="who-grid">
+    <div class="who-card">
       <h3>Tenants & Buyers</h3>
       <p>Ask questions, describe your lifestyle, search by voice. Rika matches you to listings and guides you through the whole process.</p>
-      <ul class="rkv-who-list">
+      <ul class="who-list">
         <li>Ask "What is council tax?", get instant answers</li>
         <li>Describe your ideal home naturally</li>
         <li>Voice or text search</li>
@@ -863,10 +167,10 @@ footer{background:var(--deep);border-top:1px solid rgba(124,58,237,.15);padding:
         <li>Mortgage guidance included</li>
       </ul>
     </div>
-    <div class="rkv-who-card rkv-landlord">
+    <div class="who-card landlord">
       <h3>Landlords & Agents</h3>
       <p>Verbally register your listing. Ask market questions. </p>
-      <ul class="rkv-who-list">
+      <ul class="who-list">
         <li>Register listing by speaking/ typing, no forms</li>
         <li>Ask "What rent should I charge?", AI advises based on market</li>
         <li>Understand council tax obligations</li>
@@ -876,47 +180,90 @@ footer{background:var(--deep);border-top:1px solid rgba(124,58,237,.15);padding:
     </div>
   </div>
 </section>
-<section class="rkv-demos">
+<section class="demos">
 
-  <h2 class="rkv-section-title"> See it in Action</h2>
-  <div class="rkv-demos-grid">
-    <div class="rkv-demo-card">
-    <div class="rkv-demo-video"><iframe src="https://www.youtube.com/embed/qA67hR3qKrY" allowfullscreen></iframe></div>
-     <div class="rkv-demo-info"><h3>For Tenants</h3><p>Asking questions and getting matched to listings through natural conversation.</p></div>
+  <h2 class="section-title"> See it in Action</h2>
+  <div class="demos-grid">
+    <div class="demo-card">
+    <div class="demo-video"><iframe src="https://www.youtube.com/embed/qA67hR3qKrY" allowfullscreen></iframe></div>
+     <div class="demo-info"><h3>For Tenants</h3><p>Asking questions and getting matched to listings through natural conversation.</p></div>
     </div>
-    <div class="rkv-demo-card">
-    <div class="rkv-demo-video"><iframe src="https://www.youtube.com/embed/UDqhNOY2xrM" allowfullscreen></iframe></div>
-     <div class="rkv-demo-info"><h3>For Landlords</h3><p>Asking property doubts and verbally registering a listing through conversation.</p></div>
+    <div class="demo-card">
+    <div class="demo-video"><iframe src="https://www.youtube.com/embed/UDqhNOY2xrM" allowfullscreen></iframe></div>
+     <div class="demo-info"><h3>For Landlords</h3><p>Asking property doubts and verbally registering a listing through conversation.</p></div>
     </div>
-    <div class="rkv-demo-card">
-    <div class="rkv-demo-video"><iframe src="https://www.youtube.com/embed/xg1EKWAW2d8" allowfullscreen></iframe></div>
-     <div class="rkv-demo-info"><h3>Multilingual Support </h3><p>Mobile view. Rikanverse responding when the user converses in their native language.</p></div>
+    <div class="demo-card">
+    <div class="demo-video"><iframe src="https://www.youtube.com/embed/xg1EKWAW2d8" allowfullscreen></iframe></div>
+     <div class="demo-info"><h3>Multilingual Support </h3><p>Mobile view. Rikanverse responding when the user converses in their native language.</p></div>
     </div>
   </div>
 </section>
 
+<!-- ══ NEW: OTHER AI PRODUCTS ══ -->
+<section class="demo-section">
+  <div class="container">
+    <p class="section-eyebrow">Other AI Products by Rikanverse Ltd</p>
+    <h2 class="section-title">AGENTIC AI APPS IN ACTION</h2>
+    <p class="section-sub">Designed &amp; Built by Rimjhim (Rémy) Singh</p>
 
+    <div class="demo-grid">
 
+      <div class="demo-card">
+        <div class="demo-card-inner">
+          <div class="demo-card-name">E-COMMERCE AGENTIC AI SOLUTION - Customer Service</div>
+          <a href="https://drive.google.com/file/d/1eT5u2u15LWXnDHJVYhNHkCs_yCPnVOqI/view" target="_blank" class="demo-thumb">
+            <img src="demothumbnail.png" alt="E-commerce Agentic AI Demo">
+            <div class="demo-play">▶</div>
+          </a>
+          <p class="demo-caption">CLICK TO WATCH THE FULL DEMO</p>
+        </div>
+      </div>
 
+      <div class="demo-card">
+        <div class="demo-card-inner">
+          <div class="demo-card-name">FINTECH &amp; BANKING AGENTIC AI SOLUTION</div>
+          <p class="demo-card-desc">Intelligent Banking Agent on a ReAct Orchestration Engine with a Six-Gate Safety System</p>
+          <div class="demo-thumb">
+            <img src="fintechthumbnail.png" alt="Fintech &amp; Banking Agentic AI Solution">
+          </div>
+        </div>
+      </div>
 
+      <div class="demo-card">
+        <div class="demo-card-inner">
+          <div class="demo-card-name">HOSPITALITY INDUSTRY AGENTIC AI APP SOLUTION: HOTEL REVIEW AUTOMATION</div>
+          <p class="demo-card-desc">A 4-layer production system automating review management with strict human-in-the-loop workflow — 92% sentiment accuracy, 2-3 second end-to-end processing, and active crisis detection for compliance risks.</p>
+          <a href="https://drive.google.com/file/d/1Pa5gLN3110tsfWyOXLf_sQpxd7TRXbQS/view" target="_blank" class="demo-thumb">
+            <img src="reviewthumbnail.png" alt="AI Review Response Agent Demo">
+            <div class="demo-play">▶</div>
+          </a>
+          <p class="demo-caption">CLICK TO WATCH THE FULL DEMO</p>
+        </div>
+      </div>
 
-<section style="padding:40px 60px;text-align:center;border-top:1px solid var(--border);">
-  <p style="color:rgba(255,255,255,0.8);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;"> Rikanverse ProTech App Beta Deployment Timestamp</p>
-  <img src="https://rikanverse.com/railway.jpeg" style="max-width:600px;width:100%;border-radius:12px;border:1px solid rgba(126,184,247,0.15);opacity:0.8;">
-  <p style="color:rgba(255,255,255,0.8);font-size:0.75rem;margin-top:12px;"> Deployed on June 10, 2026</p>
+    </div>
+  </div>
 </section>
 
-<section id="founder" style="scroll-margin-top:60px;padding:80px 60px;max-width:1100px;margin:0 auto;">
-  <p class="rkv-section-label">Meet the Founder</p>
-  <h2 class="rkv-section-title" style="margin-bottom:40px;">Rimjhim (Rémy) Singh</h2>
+<section class="marvel2">
+  <p>Other Flagship AI Products by Rikanverse Ltd · Rimjhim AI Kingdom®</p>
+  <a href="https://rimjhimaikingdom.com/" target="_blank">
+    <img src="banner5.png" alt="RIMJHIM AI KINGDOM®" style="max-width:900px;width:100%;border-radius:16px;border:1px solid rgba(126,184,247,0.15);box-shadow:0 20px 60px rgba(0,0,0,0.4);transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+  </a>
+</section>
+<!-- ══ END NEW SECTION ══ -->
 
-  <div class="rkv-founder-box" style="background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:48px;">
+<section style="padding:80px 60px;max-width:1100px;margin:0 auto;">
+  <p class="section-label">Meet the Founder</p>
+  <h2 class="section-title" style="margin-bottom:40px;">Rimjhim (Rémy) Singh</h2>
 
-    <div class="rkv-founder-photo">
-      <img src="https://rikanverse.com/founder.jpg" alt="Rimjhim (Rémy) Singh">
+  <div class="founder-box" style="background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:48px;">
+
+    <div class="founder-photo">
+      <img src="founder.jpg" alt="Rimjhim (Rémy) Singh">
     </div>
 
-    <div class="rkv-founder-text">
+    <div class="founder-text">
       <p style="color:var(--gold);font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">
         AI Engineer · Technical AI Product Architect · Economist · Founder
       </p>
@@ -953,6 +300,12 @@ footer{background:var(--deep);border-top:1px solid rgba(124,58,237,.15);padding:
 </section>
 
 <section style="padding:40px 60px;text-align:center;border-top:1px solid var(--border);">
+  <p style="color:rgba(255,255,255,0.8);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;"> Rikanverse ProTech App Beta Deployment Timestamp</p>
+  <img src="railway.jpeg" style="max-width:600px;width:100%;border-radius:12px;border:1px solid rgba(126,184,247,0.15);opacity:0.8;">
+  <p style="color:rgba(255,255,255,0.8);font-size:0.75rem;margin-top:12px;"> Deployed on June 10, 2026</p>
+</section>
+
+<section style="padding:40px 60px;text-align:center;border-top:1px solid var(--border);">
   <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Contact & Connect</p>
   <a href="https://www.linkedin.com/company/rikanverse/?viewAsMember=true" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#0a66c2,#004182);color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;margin:8px;">
     Rikanverse Ltd on LinkedIn →
@@ -961,81 +314,9 @@ footer{background:var(--deep);border-top:1px solid rgba(124,58,237,.15);padding:
     Rimjhim (Rémy) Singh — Founder →
   </a>
 </section>
-</div>
-<!-- ══ END RIKANVERSE ══ -->
-
-<!-- ══ FOOTER ══ -->
 <footer>
-  <div class="footer-logo">RIMJHIM AI KINGDOM</div>
-  <div class="footer-tagline">"Where Knowledge Flows Like Raindrops"</div>
-  <div class="footer-links">
-    <a href="https://www.linkedin.com/in/rimjhim-ri" target="_blank">LinkedIn</a>
-    <a href="https://github.com/rimjhimsinghcoder1" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/company/rimjhim-ai-kingdom" target="_blank">RIMJHIM AI KINGDOM </a>
-    <a href="https://medium.com/@rimjhimsingh.professional" target="_blank">Medium Articles</a>
-    <a href="https://rikanverse.com" target="_blank">Rikanverse.com</a>
-  </div>
-  <p style="font-family:'Share Tech Mono',monospace;font-size:9px;color:#1e2d45;margin-top:16px;letter-spacing:2px;">RIMJHIM AI KINGDOM © 2025 · BUILT WITH PRECISION · POWERED BY CURIOSITY · © 2026 RIKANVERSE LTD., LONDON</p>
+  <span>© 2026 Rikanverse Ltd., London.</span>
+  <a href="https://www.linkedin.com/in/rimjhim-ri/" target="_blank" style="color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#7eb8f7'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Rimjhim (Rémy) Singh · AI Engineer & Founder →</a>
 </footer>
-
-<script>
-/* ── CITY DATA ── */
-const cityData = {
-  bank: {
-    tag:'FINTECH · AGENTIC AI · FCA/GDPR', title:'BANKING TOWER', color:'#a78bfa',
-    problems:['Our chatbot only follows scripted flows — it can\'t reason or adapt','Compliance checks are manual and slow — real risk of human error','Customer escalation is unpredictable — we lose trust at critical moments'],
-    solution:'Rimjhim built an Intelligent Banking Agent on a ReAct Orchestration Engine with a Six-Gate Safety System — verifying every action against FCA/GDPR rules automatically. Confidence-based routing to human agents when certainty drops below threshold. Zero unsafe actions.',
-    stack:['ReAct Engine','LangChain','RAG','6-Gate Safety','FCA/GDPR','Python']
-  },
-  prop: {
-    tag:'PROPTECH · VOICE-FIRST · AGENTIC', title:'PROPERTY TOWERS', color:'#67e8f9',
-    problems:['Our search is keyword-based — users can\'t search naturally or conversationally','We can\'t handle complex multi-constraint queries like "near Tube, under £400k, 2-bed"','No voice interface — competitors are already moving ahead'],
-    solution:'Rimjhim built the UK\'s first Voice-First Agentic Property Agent — understanding natural speech, reasoning across 3+ simultaneous constraints, asking clarifying questions like a human estate agent. Separate voice and text reasoning pipelines via FastAPI.',
-    stack:['Web Speech API','FastAPI','Dual-Pipeline','Intent-Gating','PostgreSQL','Python']
-  },
-  school: {
-    tag:'PRODUCTIVITY · RAG + AGENT', title:'KNOWLEDGE ACADEMY', color:'#fcd34d',
-    problems:['Staff waste hours searching through documents manually every day','AI answers hallucinate — we can\'t trust the outputs for important decisions','API costs are too high for document processing at enterprise scale'],
-    solution:'Rimjhim built an AI Document Assistant with dual-engine RAG + ReAct — zero hallucinations, full source attribution, local embeddings reducing cost by 10× vs standard implementations. Automatic fallback from agent to RAG on failure.',
-    stack:['ChromaDB','SentenceTransformers','ReAct Agent','Streamlit','Local Embeddings','Python']
-  },
-  rest: {
-    tag:'HOSPITALITY · NLP · HUMAN-IN-LOOP', title:'RESTAURANT QUARTER', color:'#fca5a5',
-    problems:['Responding to 500+ reviews manually takes the team hours every week','We miss crisis reviews — one bad viral post can damage the entire brand','AI responses don\'t sound like our brand voice — they feel generic'],
-    solution:'Rimjhim built an AI Review Response Agent with sentiment analysis, crisis detection, and brand-voice generation — 92% sentiment accuracy across 500+ reviews tested. All responses routed through a human-in-loop approval dashboard.',
-    stack:['GPT-4','FastAPI','React','Crisis Detection','NLP Pipeline','Python']
-  },
-  office: {
-    tag:'AUTOMATION · AGENTIC WORKFLOW', title:'CORPORATE OFFICE', color:'#6ee7b7',
-    problems:['Our team spends 3+ hours daily on email triage alone — it\'s unsustainable','VIP emails get buried — we miss critical follow-ups that cost us relationships','Drafting context-aware replies takes too long at volume'],
-    solution:'Rimjhim built an Intelligent Email Agent with CRM integration, thread history extraction, and sentiment-matched draft replies — 87% reduction in daily email handling time. Human-in-loop approval for VIP contacts.',
-    stack:['Gmail API','n8n','GPT-4','Few-shot Learning','CRM Integration','Python']
-  },
-  news: {
-    tag:'MEDIA · LLM PIPELINE · AUTOMATION', title:'NEWS CHANNEL HQ', color:'#93c5fd',
-    problems:['We can\'t monitor 20+ competitor and industry sources manually every day','Intelligence is always 24hrs late — decisions are made on stale information','Summarising and distributing articles takes a full-time person'],
-    solution:'Rimjhim built an AI News Intelligence System — autonomous pipeline running every 4 hours, aggregating 20+ sources, compressing via GPT-4, syncing to a searchable Notion knowledge base. 4× article coverage with near-zero manual overhead.',
-    stack:['n8n','News API','GPT-4','Notion API','Automation Pipeline','Python']
-  }
-};
-
-function openCity(key) {
-  const d = cityData[key];
-  document.getElementById('pp-tag').textContent = d.tag;
-  const title = document.getElementById('pp-title');
-  title.textContent = d.title;
-  title.style.color = d.color;
-  document.getElementById('pp-problems').innerHTML = d.problems.map(p=>`<li>${p}</li>`).join('');
-  document.getElementById('pp-solution').textContent = d.solution;
-  document.getElementById('pp-stack').innerHTML = d.stack.map(s=>`<span style="color:${d.color};border-color:${d.color}50;background:${d.color}10">${s}</span>`).join('');
-  const panel = document.getElementById('cityPanel');
-  panel.classList.add('open');
-  setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'nearest'}),100);
-}
-
-function closeCity() {
-  document.getElementById('cityPanel').classList.remove('open');
-}
-</script>
 </body>
 </html>
