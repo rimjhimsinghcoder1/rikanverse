@@ -118,17 +118,20 @@ Of the 27 respondents who valued an AI guide, 14 said it only matters if the inf
 
 ## Paper
 
-R. Singh, *Engineering Trustworthy Conversational AI: When to Ask, Act, or
-Abstain in Deployed LLM Agents*, Preprint, Zenodo, 2026. DOI: [10.5281/zenodo.23887913](https://doi.org/10.5281/zenodo.23887913)
+R. Singh, *Engineering Reliable Agentic AI: Decision-Making in Real-World
+Deployments*, International Journal for Multidisciplinary Research (IJFMR),
+vol. 8, no. 6, 2026. DOI: [10.36948/ijfmr.2026.v08i06.91388](https://doi.org/10.36948/ijfmr.2026.v08i06.91388)
 
 ```bibtex
-@misc{singh2026rikanverse,
-  author    = {Singh, Rimjhim},
-  title     = {When to Ask, Act or Decline: AI Engineering Lessons from Rikanverse, a Deployed LLM Agent},
-  year      = {2026},
-  publisher = {Zenodo},
-  note      = {Preprint},
-  doi       = {10.5281/zenodo.23887913}
+@article{singh2026reliable,
+  author  = {Singh, Rimjhim},
+  title   = {Engineering Reliable Agentic AI: Decision-Making in Real-World Deployments},
+  journal = {International Journal for Multidisciplinary Research},
+  year    = {2026},
+  volume  = {8},
+  number  = {6},
+  doi     = {10.36948/ijfmr.2026.v08i06.91388},
+  url     = {https://doi.org/10.36948/ijfmr.2026.v08i06.91388}
 }
 ```
 
